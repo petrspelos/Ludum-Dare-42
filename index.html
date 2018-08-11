@@ -5,6 +5,7 @@
         <title>Ludum Dare 42 game</title>
         <link rel="stylesheet" href="css/lib/bootstrap.css" type="text/css">
         <link rel="stylesheet" href="css/main.css" type="text/css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Slabo+27px">
     </head>
     <body>
         <div id="desktopWrapper">
@@ -27,6 +28,15 @@
                     </div>
                 </div>
             </div>
+
+            <div id="startupScreen" class="fullscreen">
+                <img src="img/LoadingCircle.png">
+                <h2>Loading...</h2>
+            </div>
+
+            <div id="blackScreen" class="fullscreen">
+                <img src="img/Black.jpg" style="width: 100%;">
+            </div>
         </div>
 
         <!-- lib -->
@@ -37,6 +47,7 @@
 
         <!-- scripts -->
         <script src="js/desktop.js"></script>
+        <script src="js/startup.js"></script>
         <script src="js/app.js"></script>
     </body>
 </html>
