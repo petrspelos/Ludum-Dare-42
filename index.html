@@ -7,7 +7,28 @@
         <link rel="stylesheet" href="css/main.css" type="text/css">
     </head>
     <body>
-        <div id="desktopWrapper">
+        <div id="desktopWrapper" class="verticalAlign">
+
+            <div id="desktopWindowFrame" class="uiTransparent container">
+                <div class="row rowNoPaddingOrMargin" style="width: 100%;">
+                    <div class="container-fluid verticalAlign" style="height: 100%; margin-bottom: 5px;">
+                        <div class="row" style="width: 100%;">
+                            <div class="col-auto mr-auto verticalAlign rowNoPaddingOrMargin" style="margin-left: 15px;">
+                                <span id="desktopWindowTitle" class="text-white">Some application</span>
+                            </div>
+                            <div class="col-auto rowNoPaddingOrMargin">
+                                <button type="button" onclick="WindowHide();" class="btn btn-outline-danger btnCloseButton">x</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-fluid verticalAlign rowNoPaddingOrMargin" style="height: 100%;">
+                        <div id="desktopWindowPageWrapper" class="row rowNoPaddingOrMargin uiTransparent" style="width: 100%; min-height: 100%;">
+                            <!-- TEMPLATES GET PASTED HERE -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <div id="desktopTaskbar" class="uiTransparent">
                 <div class="container-fluid verticalAlign" style="height: 100%;">
                     <div class="row" style="width: 100%;">
@@ -37,6 +58,7 @@
 
         <!-- scripts -->
         <script src="js/desktop.js"></script>
+        <script src="js/window.js"></script>
         <script src="js/app.js"></script>
     </body>
 </html>
