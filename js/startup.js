@@ -11,6 +11,12 @@ function _InitiateStartupSequence()
     .to($loadingText, 5, {opacity: 1, ease: Elastic})
     .to($loadingText, 1, {opacity: 0, ease: Elastic})
     .to($loadingImage, 1, {delay: 1, opacity: 0, ease: Elastic})
-    .to($startupScreen, 3, {delay: 1, opacity: 0, ease: Elastic});
+    .to($startupScreen, 3, {delay: 1, opacity: 0, ease: Elastic, onComplete: _DestroyStartupScreen});
     tl.play();
+}
+
+function _HideStartupScreen()
+{
+    $('#startupScreen').hide();
+    $('#blackScreen').hide();
 }
