@@ -10,7 +10,7 @@ function _NotificationShow(title, htmlContent, icon)
     $notificationBar.append($notificationObject);
     
     var tween = TweenLite.to($notificationObject, 2, {
-        left: -($notificationObject.width() + 27),
+        left: -($notificationObject.width() + 72),
         ease: Power1.easeInOut,
         delay: 0.2
     });

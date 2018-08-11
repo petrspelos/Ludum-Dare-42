@@ -19,7 +19,7 @@
 
 $(document).ready(function()
 {
-    _InitiateStartupSequence();
+    //_InitiateStartupSequence();
 
     Update();
     setInterval(Update, 30000);
