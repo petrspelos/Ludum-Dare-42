@@ -136,9 +136,20 @@ html {
 }
 
 .notifyIcon {
-    float: left;
     padding-right: 5px;
     display: inline;
-    height: 60px;
+}
+
+.desktopIcon {
     width: 60px;
+    height: 80px;
+    background-color: transparent;
+}
+
+.desktopIcon:hover {
+    background-color: #F2E3D5;
+}
+
+.desktopIcon:active {
+    background-color: #F2F2F0;    
 }

@@ -8,9 +8,26 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Slabo+27px">
     </head>
     <body>
-        <div id="desktopWrapper" class="verticalAlign">
+        <!-- <button type="button" onclick="WindowCreateFromTemplate('testTemplate');" class="btn btn-primary">Run Test App</button> -->
 
-            <button type="button" onclick="WindowCreateFromTemplate('testTemplate');" class="btn btn-primary">Run Test App</button>
+        <div class="fullscreen">
+            <div class="desktopIcon">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <img src="https://www.shareicon.net/data/128x128/2015/08/01/78354_check_512x512.png" width="60" height="60"></img>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 verticalAlign" >
+                            <span>This is an Icon!</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div id="desktopWrapper" class="verticalAlign">
 
             <div id="desktopWindowFrame" class="uiTransparent container">
                 <div class="row rowNoPaddingOrMargin" style="width: 100%;">
@@ -52,14 +69,15 @@
                 </div>                
             </div>
 
-            <div id="startupScreen" class="fullscreen">
+            <!-- <div id="startupScreen" class="fullscreen">
                 <img src="img/LoadingCircle.png">
                 <h2>Loading...</h2>
-            </div>
+            </div> -->
 
-            <div id="blackScreen" class="fullscreen">
+            <!-- <div id="blackScreen" class="fullscreen">
                 <img src="img/Black.jpg" style="width: 100%;">
             </div>
+            </div> -->
             <div id="notificationBar"></div>
         </div>
 
