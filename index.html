@@ -7,7 +7,27 @@
         <link rel="stylesheet" href="css/main.css" type="text/css">
     </head>
     <body>
-        <button type="button" class="btn btn-primary">Bootstrap button</button>
+        <div id="desktopWrapper">
+            <div id="desktopTaskbar" class="uiTransparent">
+                <div class="container-fluid verticalAlign" style="height: 100%;">
+                    <div class="row" style="width: 100%;">
+                        <div class="col-auto mr-auto" style="margin-left: 15px;">
+                            <span class="badge badge-primary">Primary</span>
+                            <span class="badge badge-secondary">Secondary</span>
+                            <span class="badge badge-success">Success</span>
+                            <span class="badge badge-danger">Danger</span>
+                            <span class="badge badge-warning">Warning</span>
+                            <span class="badge badge-info">Info</span>
+                            <span class="badge badge-light">Light</span>
+                            <span class="badge badge-dark">Dark</span>
+                        </div>
+                        <div class="col-auto">
+                            <span id="taskbarTime" class="text-white"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- lib -->
         <script src="js/lib/jquery-331.min.js"></script>
@@ -16,6 +36,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
 
         <!-- scripts -->
+        <script src="js/desktop.js"></script>
         <script src="js/app.js"></script>
     </body>
 </html>

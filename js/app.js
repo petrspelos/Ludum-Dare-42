@@ -17,4 +17,13 @@
 //     tl.play();
 // }
 
-console.log("Hello, LD jam");
+$(document).ready(function()
+{
+    Update();
+    setInterval(Update, 30000);
+});
+
+function Update()
+{
+    _UpdateTaskbarTime();
+}
