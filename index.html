@@ -10,7 +10,7 @@
     <body>
         <!-- <button type="button" onclick="WindowCreateFromTemplate('testTemplate');" class="btn btn-primary">Run Test App</button> -->
 
-        <div class="fullscreen" style="padding: 16px">
+        <div id="iconTray" class="fullscreen" style="padding: 16px">
             <div class="desktopIcon" style="float: left; padding: 10px" onclick="WindowCreateFromTemplate('testTemplate');">
                 <div class="container">
                     <div class="row" style="margin-bottom: 10px;">
@@ -40,6 +40,21 @@
                         </div>
                     </div>
                 </div>
+
+            <div class="desktopIcon" style="float: left; padding: 10px" onclick="WindowCreateFromTemplate('avocadoTest');">
+                <div class="container">
+                    <div class="row" style="margin-bottom: 10px;">
+                        <div class="col-12 rowNoPaddingOrMargin verticalAlign" style="margin: 5px">
+                            <img src="http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/128/32358-avocado-icon.png" width="60" height="60" style="margin: auto"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 verticalAlign rowNoPaddingOrMargin">
+                            <span class="color: white; text-shadow: 0px 0px 2px black;">Avocado Installer </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
         
@@ -106,8 +121,10 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.4/TweenMax.min.js"></script>
 
         <!-- scripts -->
+        <script src="js/appRepository.js"></script>
         <script src="js/desktop.js"></script>
         <script src="js/startup.js"></script>
+        <script src="js/avocado.js"></script>
         <script src="js/window.js"></script>
         <script src="js/utility.js"></script>
         <script src="js/notifications.js"></script>

@@ -1,0 +1,24 @@
+<!-- http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/book-bookmark-icon.png -->
+<script>
+    var applicationToInstall = {
+        "name": "notes",
+        "ToS": "You agree to not save nasty information about our company and our operating system, including expressions through emojis.",
+        "callback": function () {
+            console.log('-- Notes Installed --');
+        }
+    }
+</script>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="jumbotron jumbotron-fluid" style="background-image: url('https://thumbs.gfycat.com/InexperiencedNaturalBustard-size_restricted.gif'); background-size: cover; color: white; text-shadow: 0px 0px 3px black;">
+                <div class="container">
+                  <h1 class="display-4">My Test Application!</h1>
+                  <p class="lead">A simple application demonstrating installation with the Avocado Installer.</p>
+                </div>
+              </div>
+              <button type="button" class="btn btn-danger" onclick="WindowHide();">Cancel</button>
+              <button type="button" class="btn btn-success" onclick="AvocadoInstall(applicationToInstall);">Install</button>
+        </div>
+    </div>
+</div>

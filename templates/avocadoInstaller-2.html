@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="jumbotron" id="installerJumbotron" style="background-color: rgb(151, 175, 143); background-image: url('http://icons.iconarchive.com/icons/google/noto-emoji-food-drink/128/32358-avocado-icon.png'); background-repeat: no-repeat; background-size: 250px; background-position: right;">
+                <h1 class="display-4" id="installerTitle"> </h1>
+                <p class="lead">To install this application, you have to agree with the following Terms of Service:.</p>
+                <textarea id="installedTos">
+
+                </textarea>
+                <hr class="my-4">
+                <p>If you do not accept these Terms of Service, the application will not be installed.</p>
+                <button type="button" class="btn btn-danger" onclick="WindowHide();">Decline</button>
+                <button type="button" class="btn btn-success" onclick="WindowCreateFromTemplate('avocadoInstaller-3');">Accept</button>
+            </div>
+        </div>
+    </div>
+</div>
+    
+<script>
+    //_applicationState['AvocadoInstaller'];
+    $('#installerTitle').text("Installing " + _applications[_applicationState['AvocadoInstaller'].name]['friendlyName']);
+    $('#installerJumbotron').css('background-image', "url('" + _applications[_applicationState['AvocadoInstaller'].name]['icon'] + "')");
+    $('#installedTos').val(_applicationState['AvocadoInstaller'].ToS);
+</script>

@@ -1,3 +1,5 @@
+var _applicationState = {};
+
 function DesktopSetWallpaper(url)
 {
     _DesktopSetWallpaper(url);
@@ -37,4 +39,19 @@ function WindowCreateFromTemplate(templateName)
 function WindowClearTemplate()
 {
     _WindowClearTemplate();
+}
+
+function AppSetInstalled(app, installed)
+{
+    _applications[app]['installed'] = installed;
+}
+
+function AvocadoInstall(appData)
+{
+    _AvocadoInstall(appData);
+}
+
+function DesktopAddIcon(name, icon, template)
+{
+    _DesktopAddIcon(name, icon, template);
 }
