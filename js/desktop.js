@@ -4,9 +4,9 @@ function _DesktopSetWallpaper(url)
     $desktopWrapper.css('background-image', 'url("' + url + '")');
 }
 
-function _UpdateTaskbarTime()
+function _TaskbarUpdateTime()
 {
     let $taskbarTime = $('#taskbarTime');
     let date = new Date();
-    $taskbarTime.text(date.getHours() + ":" + date.getMinutes());
+    $taskbarTime.text(`${date.getHours()}:${date.getMinutes()}`);
 }
