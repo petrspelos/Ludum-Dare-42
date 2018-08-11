@@ -30,6 +30,7 @@ function WindowHide()
 
 function WindowCreateFromTemplate(templateName)
 {
+    _WindowShow();
     _WindowCreateFromTemplate(templateName);
 }
 
