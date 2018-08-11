@@ -25,5 +25,5 @@ $(document).ready(function()
 
 function Update()
 {
-    _UpdateTaskbarTime();
+    _TaskbarUpdateTime();
 }

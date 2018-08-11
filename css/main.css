@@ -47,3 +47,34 @@ html {
     display: flex;
     align-items: center;
 }
+
+#notificationBar {
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    top: 0;
+    right: 0;
+    height: 94%;
+    width: 20%;
+}
+
+.notification {
+    display: inline;
+    position: relative;
+    min-height: 20px;
+    max-width: 100%;
+    width: fit-content;
+    padding: 5px;
+    left: 100%;   
+    width: fit-content;
+    border-color:#567D8C; 
+    color:#F2F2F0;
+    border-radius: 10px; 
+    border-style: solid;
+}
+
+.notifyIcon {
+    display: inline;
+    height: 60px;
+    width: 60px;
+}
