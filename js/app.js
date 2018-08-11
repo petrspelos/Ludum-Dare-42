@@ -23,9 +23,10 @@ $(document).ready(function()
 
     Update();
     setInterval(Update, 30000);
+    WindowHide();
 });
 
 function Update()
 {
-    _UpdateTaskbarTime();
+    _TaskbarUpdateTime();
 }

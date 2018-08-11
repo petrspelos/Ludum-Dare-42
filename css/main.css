@@ -42,6 +42,21 @@ html {
     background-size: cover;
 }
 
+#desktopWindowFrame {
+    width: 90%;
+    height: 85%;
+    margin: auto;
+    padding: 5px;
+    overflow: hidden;
+    overflow-y: scroll;
+    z-index: 999;
+}
+
+.rowNoPaddingOrMargin {
+    padding: 0;
+    margin: 0;
+}
+
 .verticalAlign {
     display: flex;
     align-items: center;
@@ -91,4 +106,39 @@ html {
     font-size: 50px;
     padding-left: 30px; /* Slightly off-centres it to the right to make up for
                         the three dots that makes it seemingly off-center */
+}
+
+.btnCloseButton {
+    width: 70px;
+}
+
+#notificationBar {
+    position: absolute;
+    display: flex;
+    flex-direction: column-reverse;
+    top: 0;
+    left: 100%;
+    height: 94%;
+    width: 20%;
+    background-color: #567D8C;
+}
+
+.notification {
+    display: inline;
+    position: relative;
+    min-height: 20px;
+    max-width: 100%;
+    padding: 10px;
+    border-color:#567D8C; 
+    color:#F2F2F0;
+    border-radius: 10px; 
+    border-style: solid;
+}
+
+.notifyIcon {
+    float: left;
+    padding-right: 5px;
+    display: inline;
+    height: 60px;
+    width: 60px;
 }
