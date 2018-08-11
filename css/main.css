@@ -10,7 +10,7 @@ html {
     height: 100%;
 }
 
-.fullscreen{
+.fullscreen {
     position: fixed;
     top: 0;
     left: 0;
@@ -18,4 +18,8 @@ html {
     height: 100%;
     z-index: 1000;
     background-color: black;
+}
+
+.uiTransparent {
+    background-color: rgba(7,24,38,0.7);
 }
