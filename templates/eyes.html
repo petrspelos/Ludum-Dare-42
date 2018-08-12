@@ -1,0 +1,55 @@
+<script>
+    var currentIndex = 0;
+
+    var eyesData = [
+        "https://pixnio.com/free-images/flora-plants/flowers/roses-flower-pictures/red-rose-stock-image-725x544.jpg",
+        "https://www.stock-free.org/images/make-money-dollar-usd-29022016-image-502.jpg",
+        "https://www.stock-free.org/images/make-money-dollar-usd-29022016-image-503.jpg",
+        "https://img00.deviantart.net/d029/i/2014/314/4/4/sea_lion_6_stock_stock_photo_png_by_annamae22-d8608sq.png",
+        "https://images.pexels.com/photos/276030/pexels-photo-276030.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260",
+        "https://images.pexels.com/photos/296879/pexels-photo-296879.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
+    ];
+
+    function eyesNext()
+    {
+        if(currentIndex == eyesData.length - 1) {
+            currentIndex = 0;
+        } else {
+            currentIndex++;
+        }
+        DisplayEyesImage();
+    }
+
+    function eyesPrevious()
+    {
+        if(currentIndex == 0) {
+            currentIndex = eyesData.length - 1;
+        } else {
+            currentIndex--;
+        }
+        DisplayEyesImage();
+    }
+
+    function DisplayEyesImage()
+    {
+        $("#eyesImage").attr("src", eyesData[currentIndex]);
+    }
+
+    DisplayEyesImage();
+</script>
+
+<div class="container" style="height: 100%; width: 100%;">
+    <div class="row justify-content-between" style="width: 100%;">
+        <div class="col-1">
+            <button class="btn" style="margin-right: 10px;" onclick="eyesPrevious();"><i class="fas fa-arrow-alt-circle-left"></i> PREVIOUS</button>
+        </div>
+        <div class="col-1">
+            <button class="btn" onclick="eyesNext();"><i class="fas fa-arrow-alt-circle-right"></i> NEXT</button>
+        </div>
+    </div>
+    <div class="row" style="width: 100%;">
+        <div class="col-12 text-white" style="text-align: center;">
+            <img id="eyesImage" src="https://im.tiscali.cz/booom/2017/04/07/790358-overwatch-mercy-653x367.jpg" style="height: 100%; margin: auto; text-align: center; display: block;">
+        </div>
+    </div>
+</div>
