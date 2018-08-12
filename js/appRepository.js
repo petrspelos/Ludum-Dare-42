@@ -40,9 +40,9 @@ var _applications = {
         "size": 20,
         "installed": true,
         "installer": false,
-        "protected": true,
+        "protected": false,
         "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/heart-icon.png",
-        "onUninstalled": () => { } 
+        "onUninstalled": undefined
     },
     "notesInstaller": {
         "friendlyName": "Install Notes",
@@ -92,11 +92,20 @@ var _applications = {
     },
     "other": {
         "friendlyName": "other sources of space usage / space unusage",
-        "size": -50,
+        "size": 0,
         "installed": true,
         "installer": false,
         "protected": true,
         "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/cat-icon.png",
+        "onUninstalled": () => { }
+    },
+    "recycleBin": {
+        "friendlyName": "Recycle Bin",
+        "size": 1,
+        "installed": true,
+        "installer": false,
+        "protected": false,
+        "icon": "http://icons.iconarchive.com/icons/wwalczyszyn/iwindows/128/Recycle-Bin-Full-icon.png",
         "onUninstalled": () => { }
     }
 }

@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="alert alert-primary" role="alert">
+               <p id="systemSetting">Recycle Bin</p>
+            </div>
+        </div>
+        <div class="col-12">
+            <div class="form-group">
+                <div class="desktopIcon" style="float: left; padding: 10px" onclick="select($(this))">
+                    <div class="container">
+                        <div class="row" style="margin-bottom: 10px;">
+                            <div class="col-12 rowNoPaddingOrMargin verticalAlign" style="margin: 5px">
+                                <img src="http://icons.iconarchive.com/icons/treetog/junior/128/monitor-icon.png" width="60" height="60" style="margin: auto"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 verticalAlign rowNoPaddingOrMargin">
+                                <span class="color: white; text-shadow: 0px 0px 2px black;">1</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="desktopIcon" style="float: left; padding: 10px">
+                    <div class="container">
+                        <div class="row" style="margin-bottom: 10px;">
+                            <div class="col-12 rowNoPaddingOrMargin verticalAlign" style="margin: 5px">
+                                <img src="http://icons.iconarchive.com/icons/treetog/junior/128/monitor-icon.png" width="60" height="60" style="margin: auto"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 verticalAlign rowNoPaddingOrMargin">
+                                <span style="color: white; text-shadow: 0px 0px 2px black;">2</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="desktopIcon" style="float: left; padding: 10px">
+                    <div class="container">
+                        <div class="row" style="margin-bottom: 10px;">
+                            <div class="col-12 rowNoPaddingOrMargin verticalAlign" style="margin: 5px">
+                                <img src="http://icons.iconarchive.com/icons/treetog/junior/128/monitor-icon.png" width="60" height="60" style="margin: auto"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 verticalAlign rowNoPaddingOrMargin">
+                                <span class="color: white; text-shadow: 0px 0px 2px black;">3</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function select(element)
+        {
+            if (element.css("background") == "red")
+                element.css("background-color", "blue");
+            element.css("background-color", "red");
+        }
+    </script>
+</div>
