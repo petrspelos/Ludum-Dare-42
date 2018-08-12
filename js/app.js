@@ -23,7 +23,7 @@ $(document).ready(function()
 
     IconsReload();
     Update();
-    setInterval(Update, 1000);
+    updateLoop = setInterval(Update, 1000);
     WindowHide();
 });
 
