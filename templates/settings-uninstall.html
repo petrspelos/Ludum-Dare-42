@@ -1,0 +1,28 @@
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="alert alert-primary" role="alert">               
+                <p id="systemSetting" class="backPTag" onclick="WindowCreateFromTemplate('settings-start')">System-Settings</p>
+                >>
+                <p id="changeBackground">Uninstall Applications</p>
+            </div>
+        </div>
+        <div class="col-12">
+            <div id="uninstallContent" class="form-group">
+                
+            </div>
+        </div>
+    </div>
+    <script>
+         $(document).ready(function()
+        {
+            let $content = $('#uninstallContent');
+            for (let app of AppsGetAllInstalled())
+            {
+                console.log(app);
+                let $appItem = $('<div class="container uiTransparent"><div class="row"><div class="col-2"><img src="' + app.icon + '"class="verticalAlign" style="height:40px; width:40px;"></img></div><div class="col-4 verticalAlign"><p style="text-align:center">' + app.friendlyName + '</p></div><div class="col-4 verticalAlign"><p style="text-align:center">' + app.friendlyName + '</p></div><div class="col-3 verticalAlign"><p style="text-align:center">' + app.friendlyName + '</p></div></div></div></div>')
+                $content.append($appItem);
+            }
+        });
+    </script>
+</div>
