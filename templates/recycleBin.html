@@ -55,9 +55,11 @@
     <script>
         function select(element)
         {
-            if (element.css("background") == "red")
-                element.css("background-color", "blue");
-            element.css("background-color", "red");
+            console.log(element);
+            if (element[0].classList.contains("selected"))
+                element[0].classList.remove("selected");
+            else 
+                element[0].classList.append("selected")
         }
     </script>
 </div>
