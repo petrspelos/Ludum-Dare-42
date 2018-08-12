@@ -1,5 +1,5 @@
 <div class="container">
-    <div class="row" style="background-color: lightgray;">
+    <div id="virusButcherBackground" class="row" style="background-color: lightgray;">
         <div class="card text-center" style="width: 100%;">
             <div class="card-header">
                 Featured
@@ -7,7 +7,7 @@
             <div class="card-body">
                 <h5 class="card-title">Premium 50% off!</h5>
                 <p class="card-text">For a limited time only, you can upgrade to premium protected for 50% less!</p>
-                <button type="button" class="btn btn-success btn-lg" disabled style="margin:auto;">Upgrade to premium</button>
+                <button  onclick="premium()" type="button" class="btn btn-success btn-lg" style="margin:auto;">Upgrade to premium</button>
             </div>
             <div class="card-footer text-muted">
                 2 days remaining.
@@ -51,4 +51,11 @@
             </div>
         </div>
     </div>
+
+    <script>
+        function premium()
+        {
+            document.getElementById("virusButcherBackground").setAttribute("style", "background-color: fuchsia");
+        }
+    </script>
 </div>
