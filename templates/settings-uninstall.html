@@ -27,6 +27,7 @@
             {
                 let appName = app;
                 app = apps[app];
+                if (app.protected) continue;
                 let $appItem = `
                 <div class="container uiTransparent" style="color:white">
                     <div class="row">

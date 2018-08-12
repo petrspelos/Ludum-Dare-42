@@ -9,7 +9,7 @@ var _applications = {
         "onUninstalled": () => { }
     },
     "settings-start": {
-        "friendlyName": "system-Settings",
+        "friendlyName": "System Settings",
         "size": 15,
         "installed": true,
         "installer": false,
@@ -31,13 +31,13 @@ var _applications = {
         "size": 20,
         "installed": true,
         "installer": false,
-        "protected": false,
+        "protected": true,
         "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/heart-icon.png",
         "onUninstalled": () => { } 
     },
     "notesInstaller": {
         "friendlyName": "Install Notes",
-        "size": 25,
+        "size": 5,
         "installed": true,
         "installer": true,
         "protected": false,
@@ -69,6 +69,15 @@ var _applications = {
         "installer": false,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/wwalczyszyn/android-style-honeycomb/256/Books-icon.png",
+        "onUninstalled": () => { }
+    },
+    "other": {
+        "friendlyName": "other sources of space usage / space unusage",
+        "size": -50,
+        "installed": true,
+        "installer": false,
+        "protected": true,
+        "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/cat-icon.png",
         "onUninstalled": () => { }
     }
 }
