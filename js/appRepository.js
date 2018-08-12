@@ -122,7 +122,7 @@ var _applications = {
     },
     "other": {
         "friendlyName": "other sources of space usage / space unusage",
-        "size": 0,
+        "size": -1000000,
         "installed": true,
         "installer": false,
         "protected": true,

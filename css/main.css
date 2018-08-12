@@ -69,6 +69,7 @@ html {
 #startupScreen {
     background-image: url('../img/Blue.jpg');
     width: 100%;
+    z-index: 99999999;
 }
 
 @keyframes rotate {
@@ -183,6 +184,7 @@ html {
 }
 
 .desktopIcon {
+    word-wrap: break-word;
     width: 100px;
     height: 140px;
     margin: auto;
@@ -194,12 +196,17 @@ html {
     margin-top: 15px;
 }
 
+.binItem {
+    word-break: break-all;
+    overflow: hidden;
+}
+
 .desktopIcon:hover {
     background-color: #F2F2F0;
 }
 
 .desktopIcon:active {
-    background-color: #F2E3D5;    
+    background-color: #F2E3D5;
 }
 
 .applicationContainer:hover {

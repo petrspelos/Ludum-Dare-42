@@ -23,7 +23,10 @@ $(document).ready(function()
 
     IconsReload();
     Update();
-    setInterval(Update, 1000);
+    
+    // Uncomment this when StartBootSequence is commented out & vice versa
+    updateLoop = setInterval(Update, 1000);
+    
     WindowHide();
 });
 

@@ -6,60 +6,83 @@
             </div>
         </div>
         <div class="col-12">
-            <div class="form-group">
-                <div class="desktopIcon" style="float: left; padding: 10px" onclick="select($(this))">
-                    <div class="container">
-                        <div class="row" style="margin-bottom: 10px;">
-                            <div class="col-12 rowNoPaddingOrMargin verticalAlign" style="margin: 5px">
-                                <img src="http://icons.iconarchive.com/icons/treetog/junior/128/monitor-icon.png" width="60" height="60" style="margin: auto"/>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 verticalAlign rowNoPaddingOrMargin">
-                                <span class="color: white; text-shadow: 0px 0px 2px black;">1</span>
-                            </div>
-                        </div>
-                    </div>
+            <div class="row">
+            <div id="recycleItems" class="form-group">
+                
                 </div>
-                <div class="desktopIcon" style="float: left; padding: 10px">
-                    <div class="container">
-                        <div class="row" style="margin-bottom: 10px;">
-                            <div class="col-12 rowNoPaddingOrMargin verticalAlign" style="margin: 5px">
-                                <img src="http://icons.iconarchive.com/icons/treetog/junior/128/monitor-icon.png" width="60" height="60" style="margin: auto"/>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 verticalAlign rowNoPaddingOrMargin">
-                                <span style="color: white; text-shadow: 0px 0px 2px black;">2</span>
-                            </div>
-                        </div>
-                    </div>
                 </div>
-                <div class="desktopIcon" style="float: left; padding: 10px">
-                    <div class="container">
-                        <div class="row" style="margin-bottom: 10px;">
-                            <div class="col-12 rowNoPaddingOrMargin verticalAlign" style="margin: 5px">
-                                <img src="http://icons.iconarchive.com/icons/treetog/junior/128/monitor-icon.png" width="60" height="60" style="margin: auto"/>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 verticalAlign rowNoPaddingOrMargin">
-                                <span class="color: white; text-shadow: 0px 0px 2px black;">3</span>
-                            </div>
-                        </div>
-                    </div>
+                <div class="row">
+                    <div class="btn btn-primary verticalAlign" style="display: block" onclick="remove()">Delete selected items</div>
                 </div>
             </div>
         </div>
     </div>
     <script>
-        function select(element)
+        if (_applicationState['recycleBin'] == undefined)
         {
-            console.log(element);
-            if (element[0].classList.contains("selected"))
-                element[0].classList.remove("selected");
+            _applicationState['recycleBin'] = { 'items': [
+                'hello.txt',
+                'blob.json',
+                'bleeep.ogg',
+                'THIS-picture.jpeg',
+                'pr0n.bag',
+                'shit.bag',
+                'backup.bag',
+                'untitled',
+                'Zoooooooo000000ooOoOo0o0.m',
+                'tea.bag',
+                'bea.jpeg',
+                'music-bot.tutorial',
+                '#problem.board',
+                'PeterNudes.bag',
+                'untitled1',
+                '.gitignore(1)',
+                'bagOfBags.bag.bag.bag.bag'
+            ]};
+        }
+        var $itemContainer = $('#recycleItems');
+        for (let item of _applicationState['recycleBin']['items'])
+        {
+            var oneItem = 
+            `
+            <div class="desktopIcon binItem" style="float: left; padding: 10px" onclick="select($(this))">
+                <div class="container">
+                    <div class="row" style="margin-bottom: 10px;">
+                        <div class="col-12 rowNoPaddingOrMargin verticalAlign" style="margin: 5px">
+                            <img src="http://icons.iconarchive.com/icons/treetog/junior/128/monitor-icon.png" width="60" height="60" style="margin: auto"/>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 verticalAlign rowNoPaddingOrMargin">
+                            <span class="color: white; text-shadow: 0px 0px 2px black;">${item}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `
+            $itemContainer.append(oneItem);
+        }
+            
+        function select($element)
+        {
+            if ($element[0].classList.contains("selected"))
+                $element[0].classList.remove("selected");
             else 
-                element[0].classList.append("selected")
+                $element[0].classList.add('selected')
+        }
+        function remove()
+        {
+            let $elements = $(".selected");
+            for (let $element of $elements)
+            {
+                let text = $($element).find('span')[0].textContent;
+                var index = _applicationState['recycleBin']['items'].indexOf(text);
+                if (index !== -1) {
+                    _applicationState['recycleBin']['items'].splice(index, 1);
+                    SpaceAdd(text.length, true);
+                }
+                $element.remove();
+            }
         }
     </script>
 </div>
