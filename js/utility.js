@@ -116,3 +116,19 @@ function DesktopAddIcon(name, icon, template)
 {
     _DesktopAddIcon(name, icon, template);
 }
+
+function SpaceStringify(input)
+{
+    let type = 'Kb'
+    if (input > 1000)
+    { 
+        input /= 1000;
+        type = 'Mb'
+    }
+    if (input > 1000)
+    { 
+        input /= 1000;
+        type = 'Gb'
+    }
+    return `${input} ${type}`;
+}

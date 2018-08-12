@@ -23,11 +23,12 @@ $(document).ready(function()
 
     IconsReload();
     Update();
-    setInterval(Update, 30000);
+    setInterval(Update, 1000);
     WindowHide();
 });
 
 function Update()
 {
     _TaskbarUpdateTime();
+    _SpaceUpdate();
 }
