@@ -5,6 +5,9 @@
         "ToS": "You agree to not save nasty information about our company and our operating system, including expressions through emojis.",
         "callback": function () {
             console.log('-- Notes Installed --');
+            AppSetInstalled('notesInstaller', false);
+            AppSetInstalled('notes', true);
+            IconsReload();
             _applications['notes']['installed'] = true;
             $.get( "data/docs.txt", function( data ) {
                 _applicationState['notes'] = {

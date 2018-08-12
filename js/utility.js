@@ -112,11 +112,6 @@ function AvocadoInstall(appData)
     _AvocadoInstall(appData);
 }
 
-function DesktopAddIcon(name, icon, template)
-{
-    _DesktopAddIcon(name, icon, template);
-}
-
 function GameOver()
 {
     _GameOver();
@@ -125,4 +120,20 @@ function GameOver()
 function StartBootSequence()
 {
     _StartBootSequence();
+}
+
+function SpaceStringify(input)
+{
+    let type = 'Kb'
+    if (input > 1000)
+    { 
+        input /= 1000;
+        type = 'Mb'
+    }
+    if (input > 1000)
+    { 
+        input /= 1000;
+        type = 'Gb'
+    }
+    return `${input} ${type}`;
 }

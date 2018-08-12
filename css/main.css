@@ -173,7 +173,8 @@ html {
 
 .notifyIcon {
     padding-right: 5px;
-    display: inline;
+    width: 50px;
+    height: 50px; 
 }
 
 .desktopIcon {
