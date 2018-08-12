@@ -1,0 +1,8 @@
+<textarea class="form-control" id="notesInput" rows="20" style="height: 100%; resize: none; outline: none;"></textarea>
+<script>
+var $notesInput = $('#notesInput');
+$notesInput.val(_applicationState['notes']['content'])
+$notesInput.on('input', function() {
+    _applicationState['notes']['content'] = $notesInput.val();
+});
+</script>

@@ -25,3 +25,9 @@ function _WindowShow()
     let $windowFrame = $('#desktopWindowFrame');
     $windowFrame.show();
 }
+
+function _WindowSetHeaderText(text)
+{
+    let $windowTitle = $("#desktopWindowTitle");
+    $windowTitle.text(text);
+}
