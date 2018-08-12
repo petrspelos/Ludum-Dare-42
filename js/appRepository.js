@@ -52,5 +52,23 @@ var _applications = {
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/cat-icon.png",
         "onUninstalled": () => { }
+    },
+    "virusButcher": {
+        "friendlyName": "VirusButcher v3.93",
+        "size": 50,
+        "installed": true,
+        "installer": false,
+        "protected": false,
+        "icon": "http://icons.iconarchive.com/icons/hopstarter/malware/256/Patched-icon.png",
+        "onUninstalled": () => { }
+    },
+    "education": {
+        "friendlyName": "Education",
+        "size": 30,
+        "installed": true,
+        "installer": false,
+        "protected": false,
+        "icon": "http://icons.iconarchive.com/icons/wwalczyszyn/android-style-honeycomb/256/Books-icon.png",
+        "onUninstalled": () => { }
     }
 }
