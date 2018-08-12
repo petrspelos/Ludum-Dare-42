@@ -11,7 +11,7 @@ var _applications = {
     "notes": {
         "friendlyName": "Notes",
         "size": 15,
-        "installed": false,
+        "installed": true,
         "installer": false,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/book-bookmark-icon.png",
@@ -47,7 +47,7 @@ var _applications = {
     "notesInstaller": {
         "friendlyName": "Install Notes",
         "size": 5,
-        "installed": true,
+        "installed": false,
         "installer": true,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/book-bookmark-icon.png",

@@ -54,13 +54,17 @@
                     </div>
                     <div class="row">
                         <div class="col-12 verticalAlign rowNoPaddingOrMargin">
-                            <span class="color: white; text-shadow: 0px 0px 2px black;">${item}</span>
+                            <span style="color: white; text-shadow: 0px 0px 2px black;">${item}</span>
                         </div>
                     </div>
                 </div>
             </div>
             `
             $itemContainer.append(oneItem);
+        }
+        if (_applicationState['recycleBin']['items'].length == 0)
+        {
+            $itemContainer.append('<span style="color: white; text-shadow: 0px 0px 2px black;">Empty</span>')
         }
             
         function select($element)
@@ -81,7 +85,14 @@
                     _applicationState['recycleBin']['items'].splice(index, 1);
                     SpaceAdd(text.length, true);
                 }
+                
                 $element.remove();
+                if (_applicationState['recycleBin']['items'].length == 0)
+                {
+                    $itemContainer.append('<span style="color: white; text-shadow: 0px 0px 2px black;">Empty</span>')
+                }
+                _applications.recycleBin.icon = 'http://icons.iconarchive.com/icons/wwalczyszyn/iwindows/128/Recycle-Bin-icon.png';
+                IconsReload();
             }
         }
     </script>
