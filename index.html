@@ -5,7 +5,7 @@
         <title>Ludum Dare 42 game</title>
         <link rel="stylesheet" href="css/lib/bootstrap.css" type="text/css">
         <link rel="stylesheet" href="css/main.css" type="text/css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Slabo+27px">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
     </head>
     <body>
         <!-- <button type="button" onclick="WindowCreateFromTemplate('testTemplate');" class="btn btn-primary">Run Test App</button> -->
@@ -56,14 +56,34 @@
                 </div>                
             </div>
 
-            <!-- <div id="startupScreen" class="fullscreen">
+            <!--
+            <div id="startupScreen" class="fullscreen">
                 <img src="img/LoadingCircle.png">
                 <h2>Loading...</h2>
-            </div> -->
+            </div>    
+            -->
+            
+            <div id="endScreen" class="fullscreen">
+                <div id="container">
+                    <h1>:)</h1>
+                    <h2>
+                        Your PC has ran into a problem and needs to restart. 
+                        We're just collecting some game info, and then you can restart whenever you wish.
+                    </h2>
+                    <p id="endScreenStats">
+                        Thank you very much for playing our game. <br />
+                        You cleared up <span id="spaceFreed">43</span>Mb and survived for <span id="timePlayed">54</span> seconds. <br />
+                        If you'd like to play again you can <a href="index.html">POINT_MOUSE_CURSOR_OVER_THIS_AND_CLICK</a> <br />
+                        If you'd like to vote/leave a review for this game you can do so at <a href="https://ldjam.com/events/ludum-dare/42/$98887">https://ldjam.com/events/ludum-dare/42/$98887</a>
+                    </p>
+                </div>
+            </div>
 
-            <!-- <div id="blackScreen" class="fullscreen">
+            <!--
+            <div id="blackScreen" class="fullscreen">
                 <img src="img/Black.jpg" style="width: 100%;">
-            </div> -->
+            </div>
+            -->
 
             <div id="notificationBar">
             </div>
@@ -78,7 +98,7 @@
         <!-- scripts -->
         <script src="js/appRepository.js"></script>
         <script src="js/desktop.js"></script>
-        <script src="js/startup.js"></script>
+        <script src="js/screenAnimations.js"></script>
         <script src="js/avocado.js"></script>
         <script src="js/window.js"></script>
         <script src="js/utility.js"></script>
