@@ -1,4 +1,4 @@
-function _InitiateStartupSequence()
+function _StartBootSequence()
 {
     let tl = new TimelineLite();
     let $blackScreen = $('#blackScreen');
@@ -11,8 +11,13 @@ function _InitiateStartupSequence()
     .to($loadingText, 5, {opacity: 1, ease: Elastic})
     .to($loadingText, 1, {opacity: 0, ease: Elastic})
     .to($loadingImage, 1, {delay: 1, opacity: 0, ease: Elastic})
-    .to($startupScreen, 3, {delay: 1, opacity: 0, ease: Elastic, onComplete: _DestroyStartupScreen});
+    .to($startupScreen, 3, {delay: 1, opacity: 0, ease: Elastic, onComplete: _HideStartupScreen});
     tl.play();
+}
+
+function _GameOver()
+{
+    $("#endScreen").css("display", "block");
 }
 
 function _HideStartupScreen()

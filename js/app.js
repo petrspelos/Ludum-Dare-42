@@ -19,7 +19,7 @@
 
 $(document).ready(function()
 {
-    //_InitiateStartupSequence();
+    //StartBootSequence();
 
     IconsReload();
     Update();

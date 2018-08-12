@@ -13,6 +13,7 @@
 </div>
     
 <script>
-    DesktopAddIcon(_applications[_applicationState['AvocadoInstaller'].name]['friendlyName'], _applications[_applicationState['AvocadoInstaller'].name]['icon'], _applicationState['AvocadoInstaller'].name);
+    IconsReload();
+    NotificationShow('Success!', 'A new application was installed!', _applications[_applicationState['AvocadoInstaller'].name].icon);
     _applicationState['AvocadoInstaller'].callback();
 </script>
