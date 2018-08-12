@@ -66,20 +66,14 @@
                 </div>
             </div>
 
-            <div id="desktopTaskbar" class="uiTransparent">
+            <div id="desktopTaskbar" class="uiTransparent" style="z-index: 55;">
                 <div class="container-fluid verticalAlign" style="height: 100%;">
                     <div class="row" style="width: 100%;">
                         <div class="col-auto mr-auto" style="margin-left: 15px;">
-                            <span class="badge badge-primary">Primary</span>
-                            <span class="badge badge-secondary">Secondary</span>
-                            <span class="badge badge-success">Success</span>
-                            <span class="badge badge-danger">Danger</span>
-                            <span class="badge badge-warning">Warning</span>
-                            <span class="badge badge-info">Info</span>
-                            <span class="badge badge-light">Light</span>
-                            <span class="badge badge-dark">Dark</span>
+                            <button id="startBtn" onclick="ShakeStart();" style="background-color: rgba(0,0,0,0); border: none;"><img src="img/DoorsLogo-Circle.png" width="30px" height="30px"></button>
                         </div>
                         <div class="col-auto">
+                            <span class="text-warning" style="margin-right: 25px;">Free Space: <span id="freeSpaceTag"></span></span>
                             <span id="taskbarTime" class="text-white"></span>
                         </div>
                     </div>

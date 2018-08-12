@@ -23,6 +23,11 @@ html {
     background-color: rgba(7,24,38,0.7);
 }
 
+.glitching {
+    background-image: url('http://media.tnh.me/56b7e8325ccacf41a755dc34/58bddf285ccacf211df33d88');
+    background-size: cover;
+}
+
 #desktopTaskbar {
     width: 100%;
     height: 5%; 

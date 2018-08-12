@@ -1,5 +1,5 @@
 var secondsElapsed = 0;
-var updateIncrement = 0.5;
+var updateIncrement = 1;
 var sizeDoubleInSec = 15;
 var sizeNewFileInSec = 3;
 
@@ -28,6 +28,18 @@ function _UpdaterTick()
     }
 
     _applications['update'].size += updateIncrement;
+    $('#freeSpaceTag').text(Space.freePercentage + "%");
+}
+
+function ShakeStart()
+{
+    $startBtn = $('#startBtn');
+    var tl = new TimelineLite();
+    tl.to($startBtn, 0.1, {x: -10, ease: Elastic})
+    .to($startBtn, 0.1, {x: 10, ease: Elastic})
+    .to($startBtn, 0.1, {x: -10, ease: Elastic})
+    .to($startBtn, 0.1, {x: 0, ease: Elastic});
+    tl.play();
 }
 
 var progressPercentage = 10;
