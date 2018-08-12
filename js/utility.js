@@ -178,3 +178,13 @@ function SpaceStringify(input)
     }
     return `${input} ${type}`;
 }
+
+function PlaySoundWithRandomFrequency(fileName)
+{
+    _PlaySoundWithRandomFrequency(fileName);
+}
+
+function PlaySound(fileName, volOverload)
+{
+    _PlaySound(fileName, volOverload);
+}

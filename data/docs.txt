@@ -11,3 +11,8 @@ Your goal is to clear up as much memory as you can before the disk space reaches
 • Every application takes disk space (including this app). Uninstall apps by going into the System settings and clicking Uninstall Applications. Choose which apps to uninstall wisely, as you may need them in the future, and re-installing can take a lot of time.
 
 • Open applications by left-clicking them on your desktop.
+
+
+ℹ Other information ℹ
+
+For the best experience, play with audio enabled.

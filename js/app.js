@@ -30,8 +30,9 @@ $(document).ready(function()
     });
     
     // Uncomment this when StartBootSequence is commented out & vice versa
-    updateLoop = setInterval(Update, 1000);
+    _SetupGameLoop();
     
+    InitializeAudio();
     WindowHide();
 });
 
