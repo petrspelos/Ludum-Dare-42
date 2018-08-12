@@ -4,6 +4,7 @@ var Space =
     "max": 0,
     "used": 0,
     "freePercentage": 0,
+    "saved": 0
 }
 _SpaceUpdate();
 
@@ -13,6 +14,7 @@ function _SpaceGetMax()
     for (let app in  _applications)
     {
         app = _applications[app];
+        if (app.protected) continue;
         storage += app.size;
     }
     return storage;

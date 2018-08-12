@@ -16,4 +16,5 @@
     IconsReload();
     NotificationShow('Success!', 'A new application was installed!', _applications[_applicationState['AvocadoInstaller'].name].icon);
     _applicationState['AvocadoInstaller'].callback();
+    SpaceAdd(-_applications[_applicationState['AvocadoInstaller'].name].size, true);
 </script>
