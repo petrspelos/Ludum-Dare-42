@@ -11,7 +11,7 @@ var _applications = {
     "notes": {
         "friendlyName": "Notes",
         "size": 15,
-        "installed": false,
+        "installed": true,
         "installer": false,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/book-bookmark-icon.png",
@@ -26,65 +26,101 @@ var _applications = {
         "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/wrench-screwdriver-icon.png",
         "onUninstalled": () => { }
     },
+    "consoleInstaller": {
+        "friendlyName": "Console Installer",
+        "size": 5,
+        "installed": false,
+        "installer": true,
+        "protected": false,
+        "icon": "http://icons.iconarchive.com/icons/dakirby309/simply-styled/128/Default-Programs-icon.png",
+        "onUninstalled": () => { }
+    },
     "console": {
         "friendlyName": "Console",
         "size": 15,
-        "installed": true,
+        "installed": false,
         "installer": false,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/dakirby309/simply-styled/128/Default-Programs-icon.png",
         "onUninstalled": () => { }
     },
-    "dummy": {
-        "friendlyName": "Dummy for SnoopS",
-        "size": 20,
-        "installed": true,
-        "installer": false,
-        "protected": false,
-        "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/heart-icon.png",
-        "onUninstalled": undefined
-    },
     "notesInstaller": {
         "friendlyName": "Install Notes",
         "size": 5,
-        "installed": true,
+        "installed": false,
         "installer": true,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/book-bookmark-icon.png",
         "onUninstalled": () => { }
     },
+    "eatThePlantInstaller": {
+        "friendlyName": "ETP Installer",
+        "size": 10,
+        "installed": false,
+        "installer": true,
+        "protected": false,
+        "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/cat-icon.png",
+        "onUninstalled": () => { }
+    },
     "eatThePlant": {
         "friendlyName": "EAT THE PLANT! =)",
         "size": 250,
-        "installed": true,
+        "installed": false,
         "installer": false,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/cat-icon.png",
         "onUninstalled": () => { }
     },
+    "virusButcherInstaller": {
+        "friendlyName": "VirusButcher Installer",
+        "size": 15,
+        "installed": false,
+        "installer": true,
+        "protected": false,
+        "icon": "http://icons.iconarchive.com/icons/hopstarter/malware/256/Search-icon.png",
+        "onUninstalled": () => { }
+    },
     "virusButcher": {
         "friendlyName": "VirusButcher v3.93",
         "size": 50,
-        "installed": true,
+        "installed": false,
         "installer": false,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/hopstarter/malware/256/Search-icon.png",
         "onUninstalled": () => { }
     },
+    "educationInstaller": {
+        "friendlyName": "Education Installer",
+        "size": 10,
+        "installed": false,
+        "installer": true,
+        "protected": false,
+        "icon": "http://icons.iconarchive.com/icons/wwalczyszyn/android-style-honeycomb/256/Books-icon.png",
+        "onUninstalled": () => { }
+    },
     "education": {
         "friendlyName": "Education",
         "size": 30,
-        "installed": true,
+        "installed": false,
         "installer": false,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/wwalczyszyn/android-style-honeycomb/256/Books-icon.png",
+        "onUninstalled": () => { }
+    },
+    "antiVirusInstaller": {
+        "friendlyName": "WinDOORS AntiVirus Installer",
+        "size": 5,
+        "installed": false,
+        "installer": true,
+        "protected": false,
+        "icon": "http://icons.iconarchive.com/icons/hopstarter/malware/256/Patched-icon.png",
         "onUninstalled": () => { }
     },
     "antiVirus":
     {
         "friendlyName": "WinDOORS AntiVirus",
         "size": 30,
-        "installed": true,
+        "installed": false,
         "installer": false,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/hopstarter/malware/256/Patched-icon.png",
@@ -114,7 +150,7 @@ var _applications = {
     {
         "friendlyName": ".BAG Remover Installer",
         "size": 25,
-        "installed": true,
+        "installed": false,
         "installer": true,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/flag-alt-icon.png",

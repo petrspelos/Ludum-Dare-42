@@ -28,6 +28,5 @@ function _SetupGameLoop()
     $('#startupScreen').hide();
     $('#blackScreen').hide();
 
-    Update();
     updateLoop = setInterval(Update, 1000);
 }
