@@ -1,3 +1,5 @@
+achievementsWrapperId = "achievementWrapper";
+
 class Achievement
 {
     constructor(title, description, iconUrl)
@@ -6,6 +8,52 @@ class Achievement
         this.description = description;
         this.iconUrl = iconUrl;
     }
+
+    ToHtml(completed)
+    {
+        return `
+        <div id="ach" class="achievement ${completed ? 'achievement-completed' : ''} uiTransparent">
+            <div class="container">
+                <div class="row">
+                    <div class="col-3">
+                        <img src="${this.iconUrl}" width="100px" height="100px">
+                    </div>
+                    <div class="col-9 text-white">
+                        <div class="row">
+                            <div class="col-12" style="padding: 10px;">
+                                <span style="font-weight: bold;">${this.title}</span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12" style="padding: 0px 10px;">
+                                <span>${this.description}</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `;
+    }
+
+    Popup()
+    {
+        let $wrapper = $("#" + achievementsWrapperId);
+        $wrapper.empty();
+        $wrapper.append(this.ToHtml(true));
+        let $achievement = $('#ach');
+        var tl = new TimelineLite();
+        tl.to($achievement, 0, {y: -150, ease: Elastic})
+        tl.to($achievement, 1, {y: 0, ease: Elastic})
+        .to($achievement, 1, {delay: 5, y: -150, ease: Elastic, onComplete: AchievementsClearPopups});
+        tl.play();
+    }
+}
+
+function AchievementsClearPopups()
+{
+    $wrapper = $(achievementsWrapperId);
+    $wrapper.empty();
 }
 
 class Achievements

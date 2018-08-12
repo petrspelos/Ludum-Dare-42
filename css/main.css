@@ -248,3 +248,12 @@ html {
 .selected {
     background-color: red;
 }
+
+.achievement {
+    height: 100px;
+    width: 550px;
+}
+
+.achievement-completed {
+    box-shadow: 2px 2px 30px 0px #1edc24;
+}
