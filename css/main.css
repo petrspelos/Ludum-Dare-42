@@ -69,6 +69,7 @@ html {
 #startupScreen {
     background-image: url('../img/Blue.jpg');
     width: 100%;
+    z-index: 99999999;
 }
 
 @keyframes rotate {
@@ -199,7 +200,7 @@ html {
 }
 
 .desktopIcon:active {
-    background-color: #F2E3D5;    
+    background-color: #F2E3D5;
 }
 
 .applicationContainer:hover {
@@ -233,5 +234,5 @@ html {
 }
 
 .selected {
-    background-color: red!important;
+    background-color: red;
 }
