@@ -8,13 +8,15 @@ function _NotificationShow(title, htmlContent, icon)
     let $notificationObject = $('<div class="container uiTransparent notification"><div class="row"><div class="col-4"><img src="' + icon + '"class="notifyIcon verticalAlign"></img></div><div class="col-8 verticalAlign"><p style="text-align:center">' + title + '</p></div></div><div class="row"><div class="col-12" style="margin-top:10px">' + htmlContent +'</div></div></div></div>')
     
     $notificationBar.append($notificationObject);
+
+    CallAfterSeconds(() => PlaySound("notification.wav", 0.5), 0.5);
     
     var tween = TweenLite.to($notificationObject, 2, {
         left: -($notificationObject.width() + 72),
         ease: Power1.easeInOut,
         delay: 0.2
     });
-    setTimeout(_NotificationHide, 3000, $notificationObject);
+    setTimeout(_NotificationHide, 6000, $notificationObject);
 }
 
 function _NotificationHide($notificationObject)

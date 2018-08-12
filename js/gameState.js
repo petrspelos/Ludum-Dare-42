@@ -21,6 +21,7 @@ function _GameOver()
     $("#timePlayed").text(secondsElapsed);
     $("#spaceFreed").text(SpaceStringify(Space.saved));
     clearInterval(updateLoop);
+    _PlaySound("bluescreen.wav", 0.1);
 }
 
 function _SetupGameLoop()
@@ -29,4 +30,6 @@ function _SetupGameLoop()
     $('#blackScreen').hide();
 
     updateLoop = setInterval(Update, 1000);
+    NotificationShow('Welcome!', 'Click the <em><u>Notes</u></em> to read the instructions.', 'http://icons.iconarchive.com/icons/icons8/windows-8/256/Hands-So-So-icon.png');
+
 }
