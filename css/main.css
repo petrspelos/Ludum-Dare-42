@@ -225,5 +225,5 @@ html {
 }
 
 .selected {
-    background-color: red;
+    background-color: red!important;
 }

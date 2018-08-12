@@ -64,7 +64,7 @@ function AppSetInstalled(appName, installed)
     {
         if (app.onUninstalled == undefined)
         {
-            NotificationShow("Uninstaller", `Ehhhhm... hmm... seems like I have no powah here... Unable to uninstall ${appName}.`)
+            NotificationShow("Uninstaller", `Ehhhhm... hmm... seems like I have no powah here...<br>Unable to uninstall ${appName}.`, app.icon)
             return;
         }
         app['installed'] = false;
