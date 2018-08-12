@@ -19,6 +19,8 @@ function _GameOver()
 {
     $("#endScreen").css("display", "block");
     $("#timePlayed").text(secondsElapsed);
+    $("#spaceFreed").text(SpaceStringify(Space.saved));
+    clearInterval(updateLoop);
 }
 
 function _HideStartupScreen()
