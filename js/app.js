@@ -21,7 +21,7 @@ $(document).ready(function()
 {
     //_InitiateStartupSequence();
 
-    InitIcons();
+    IconsReload();
     Update();
     setInterval(Update, 30000);
     WindowHide();

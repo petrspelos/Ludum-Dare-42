@@ -70,10 +70,18 @@ function AppsGetAllInstalled()
     return appList;
 }
 
-function InitIcons()
+function AppUninstall(appName)
+{    
+    _applications[appName].onUninstalled();
+    AppSetInstalled(appName, false);
+    IconsReload();   
+}
+
+function IconsReload()
 {
     let apps = AppsGetAllInstalled();
     let $iconTray = $('#iconTray');
+    $iconTray.empty();
     for (let appName in apps)
     {
         let app = apps[appName];
