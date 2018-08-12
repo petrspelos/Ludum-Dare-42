@@ -33,7 +33,7 @@ var _applications = {
         "installer": false,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/heart-icon.png",
-        "onInstalled": () => { } 
+        "onUnnstalled": () => { } 
     },
     "notesInstaller": {
         "friendlyName": "Install Notes",
