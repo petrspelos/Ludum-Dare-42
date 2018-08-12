@@ -26,5 +26,4 @@ function _NotificationHide($notificationObject)
         delay: 0.2,
         onComplete: () => $notificationObject.remove()
     });
-    //setTimeout(function() { $notificationObject.remove();}, 2000);
 }
