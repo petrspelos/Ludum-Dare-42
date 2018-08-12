@@ -2,9 +2,9 @@
     <div class="row">
         <div class="col-12">
             <div class="alert alert-primary" role="alert">               
-                <p id="systemSetting" class="backPTag" onclick="WindowCreateFromTemplate('settings-start')">System-Settings</p>
+                <p id="systemSetting" class="breadcrumb" onclick="WindowCreateFromTemplate('settings-start')">System-Settings</p>
                 >>
-                <p id="changeBackground">Uninstall Applications</p>
+                <p class"breadcrumb-">Uninstall Applications</p>
             </div>
         </div>
         <div class="col-12">
@@ -16,13 +16,46 @@
     <script>
          $(document).ready(function()
         {
-            let $content = $('#uninstallContent');
-            for (let app of AppsGetAllInstalled())
-            {
-                console.log(app);
-                let $appItem = $('<div class="container uiTransparent"><div class="row"><div class="col-2"><img src="' + app.icon + '"class="verticalAlign" style="height:40px; width:40px;"></img></div><div class="col-4 verticalAlign"><p style="text-align:center">' + app.friendlyName + '</p></div><div class="col-4 verticalAlign"><p style="text-align:center">' + app.friendlyName + '</p></div><div class="col-3 verticalAlign"><p style="text-align:center">' + app.friendlyName + '</p></div></div></div></div>')
-                $content.append($appItem);
-            }
+            _UpdateWindow();
         });
+        function _UpdateWindow()
+        {
+            let $content = $('#uninstallContent');
+            $content.empty();
+            let apps = AppsGetAllInstalled();
+            for (let app in apps)
+            {
+                let appName = app;
+                app = apps[app];
+                let $appItem = `
+                <div class="container uiTransparent" style="color:white">
+                    <div class="row">
+                        <div class="col-1">
+                            <img src="${app.icon}"class="verticalAlign" style="height:40px; width:40px;"></img>
+                        </div>
+                        <div class="col-3 verticalAlign">
+                            <p style="text-align:center">${app.friendlyName}</p>
+                        </div>
+                        <div class="col-6 verticalAlign">
+                            <p style="text-align:center">PLACEHOLDER FOR DESCRIPTION OF THE APP</p>
+                        </div>
+                        <div class="col-1 verticalAlign">
+                            <p style="text-align:center">${app.size}</p>
+                        </div>
+                        <button class="col-1 btn btn-primary text-white" onclick="_RemoveApp('${appName}')">
+                            X
+                        </button>
+                    </div>
+                </div>
+                `;
+                $content.append($appItem);                
+            }
+        }
+        
+        function _RemoveApp(appName)
+        {
+            AppUninstall(appName);
+            _UpdateWindow();         
+        }
     </script>
 </div>

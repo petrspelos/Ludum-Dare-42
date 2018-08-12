@@ -5,7 +5,9 @@ var _applications = {
         "installed": false,
         "installer": false,
         "protected": false,
-        "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/book-bookmark-icon.png"
+        "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/book-bookmark-icon.png",
+        "onInstalled": () => { },
+        "onUninstalled": () => { }
     },
     "settings-start": {
         "friendlyName": "system-Settings",
@@ -13,7 +15,9 @@ var _applications = {
         "installed": true,
         "installer": false,
         "protected": false,
-        "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/wrench-screwdriver-icon.png"
+        "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/wrench-screwdriver-icon.png",
+        "onInstalled": () => { },
+        "onUninstalled": () => { }
     },
     "console": {
         "friendlyName": "Console",
@@ -21,7 +25,9 @@ var _applications = {
         "installed": true,
         "installer": false,
         "protected": false,
-        "icon": "http://icons.iconarchive.com/icons/dakirby309/simply-styled/128/Default-Programs-icon.png"
+        "icon": "http://icons.iconarchive.com/icons/dakirby309/simply-styled/128/Default-Programs-icon.png",
+        "onInstalled": () => { },
+        "onUninstalled": () => { }
     },
     "dummy": {
         "friendlyName": "Dummy for SnoopS",
@@ -29,7 +35,9 @@ var _applications = {
         "installed": true,
         "installer": false,
         "protected": false,
-        "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/heart-icon.png"
+        "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/heart-icon.png",
+        "onUninstalled": () => { },
+        "onInstalled": () => { } 
     },
     "notesInstaller": {
         "friendlyName": "Install Notes",
@@ -37,6 +45,8 @@ var _applications = {
         "installed": true,
         "installer": true,
         "protected": false,
-        "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/book-bookmark-icon.png"
+        "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/book-bookmark-icon.png",
+        "onInstalled": () => { },
+        "onUninstalled": () => { }
     }
 }
