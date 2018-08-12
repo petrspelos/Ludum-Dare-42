@@ -142,7 +142,9 @@ html {
 
 .desktopIcon {
     width: 100px;
-    height: 120px;
+    height: 140px;
+    margin: auto;
+    display: inline-block;
     background-color: transparent;
     color: white;
     text-shadow: 0px 0px 2px black;
@@ -151,9 +153,17 @@ html {
 }
 
 .desktopIcon:hover {
-    background-color: #F2E3D5;
+    background-color: #F2F2F0;
 }
 
 .desktopIcon:active {
-    background-color: #F2F2F0;    
+    background-color: #F2E3D5;    
+}
+
+.alert-primary p {
+    display: inline;
+}
+.backPTag:hover {
+    display: inline;
+    background-color: #567D8C;
 }
