@@ -68,7 +68,7 @@ var _applications = {
         "installed": true,
         "installer": false,
         "protected": false,
-        "icon": "http://icons.iconarchive.com/icons/hopstarter/malware/256/Patched-icon.png",
+        "icon": "http://icons.iconarchive.com/icons/hopstarter/malware/256/Search-icon.png",
         "onUninstalled": () => { }
     },
     "education": {
@@ -78,6 +78,16 @@ var _applications = {
         "installer": false,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/wwalczyszyn/android-style-honeycomb/256/Books-icon.png",
+        "onUninstalled": () => { }
+    },
+    "antiVirus":
+    {
+        "friendlyName": "WinDOORS AntiVirus",
+        "size": 30,
+        "installed": true,
+        "installer": false,
+        "protected": false,
+        "icon": "http://icons.iconarchive.com/icons/hopstarter/malware/256/Patched-icon.png",
         "onUninstalled": () => { }
     },
     "other": {

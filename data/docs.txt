@@ -8,6 +8,6 @@ Your goal is to clear up as much memory as you can before the disk space reaches
 ❓ How to play ❓
 • Install new applications to assist you in clearing disk space by browsing the App Store.
 
-• Every file takes disk space (including this file). Browse files with the File Explorer and uninstall files by (right clicking them and hitting uninstall?)
+• Every application takes disk space (including this app). Uninstall apps by going into the System settings and clicking Uninstall Applications. Choose which apps to uninstall wisely, as you may need them in the future, and re-installing can take a lot of time.
 
-• Open applications and files by left-clicking them on your desktop.
+• Open applications by left-clicking them on your desktop.

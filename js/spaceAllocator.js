@@ -6,6 +6,7 @@ var Space =
     "freePercentage": 0,
     "saved": 0
 }
+
 _SpaceUpdate();
 
 function _SpaceGetMax()
