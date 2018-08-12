@@ -11,7 +11,7 @@ function _StartBootSequence()
     .to($loadingText, 5, {opacity: 1, ease: Elastic})
     .to($loadingText, 1, {opacity: 0, ease: Elastic})
     .to($loadingImage, 1, {delay: 1, opacity: 0, ease: Elastic})
-    .to($startupScreen, 3, {delay: 1, opacity: 0, ease: Elastic, onComplete: _HideStartupScreen});
+    .to($startupScreen, 3, {delay: 1, opacity: 0, ease: Elastic, onComplete: _SetupGameLoop});
     tl.play();
 }
 
@@ -23,8 +23,11 @@ function _GameOver()
     clearInterval(updateLoop);
 }
 
-function _HideStartupScreen()
+function _SetupGameLoop()
 {
     $('#startupScreen').hide();
     $('#blackScreen').hide();
+
+    Update();
+    updateLoop = setInterval(Update, 1000);
 }
