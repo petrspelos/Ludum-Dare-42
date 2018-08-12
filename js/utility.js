@@ -72,6 +72,7 @@ function AppSetInstalled(appName, installed)
     IconsReload();
 }
 
+var InstallerTimeout; // Important for multiple installations.
 
 function AppsGetAllInstalled()
 {
@@ -84,6 +85,12 @@ function AppsGetAllInstalled()
             appList[appNa] = app;
     }
     return appList;
+}
+
+function CallAfterSeconds(callback, seconds)
+{
+    clearTimeout(InstallerTimeout);
+    InstallerTimeout = setTimeout(function() { callback(); }, seconds * 1000);
 }
 
 function SpaceAdd(amount, countForScore=false)
