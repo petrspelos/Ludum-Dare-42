@@ -90,6 +90,36 @@ var _applications = {
         "icon": "http://icons.iconarchive.com/icons/hopstarter/malware/256/Patched-icon.png",
         "onUninstalled": () => { }
     },
+    "stuffBag":
+    {
+        "friendlyName": "Stuff.bag",
+        "size": 500,
+        "installed": true,
+        "installer": false,
+        "protected": false,
+        "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/bag-icon.png",
+        // "onUninstalled": () => {  }
+    },
+    "bagKiller":
+    {
+        "friendlyName": ".BAG Remover",
+        "size": 5,
+        "installed": false,
+        "installer": false,
+        "protected": false,
+        "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/flag-alt-icon.png",
+        "onUninstalled": () => { _applications['stuffBag'].onUninstalled = undefined; }
+    },
+    "bagKillerInstaller":
+    {
+        "friendlyName": ".BAG Remover Installer",
+        "size": 25,
+        "installed": true,
+        "installer": true,
+        "protected": false,
+        "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/flag-alt-icon.png",
+        "onUninstalled": () => {  }
+    },
     "other": {
         "friendlyName": "other sources of space usage / space unusage",
         "size": -50,
