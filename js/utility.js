@@ -54,9 +54,9 @@ function WindowClearTemplate()
 function AppSetInstalled(appName, installed)
 {
     let app = _applications[appName];
-    app['installed'] = installed;
     if (installed == true)
     {
+        app['installed'] = true;
         Space.saved -= app.size;
         NotificationShow('Installer', `${appName} has successfully been installed ~ just for you <3!`, app.icon);
     }
@@ -64,6 +64,7 @@ function AppSetInstalled(appName, installed)
     {
         if (app.onUninstalled == undefined)
             return;
+        app['installed'] = false;
         Space.saved += app.size;
         app.onUninstalled();
         NotificationShow('Uninstaller', `${appName} has been successfully uninstalled!`, app.icon);
