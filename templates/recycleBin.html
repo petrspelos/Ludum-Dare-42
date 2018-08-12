@@ -8,24 +8,11 @@
         <div class="col-12">
             <div class="row">
             <div id="recycleItems" class="form-group">
-                <div class="desktopIcon" style="float: left; padding: 10px" onclick="select($(this))">
-                    <div class="container">
-                        <div class="row" style="margin-bottom: 10px;">
-                            <div class="col-12 rowNoPaddingOrMargin verticalAlign" style="margin: 5px">
-                                <img src="http://icons.iconarchive.com/icons/treetog/junior/128/monitor-icon.png" width="60" height="60" style="margin: auto"/>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 verticalAlign rowNoPaddingOrMargin">
-                                <span class="color: white; text-shadow: 0px 0px 2px black;">1</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
                 </div>
                 </div>
                 <div class="row">
-                    <div class="btn btn-primary verticalAlign" style="display: block" onclick="remove()">something</div>
+                    <div class="btn btn-primary verticalAlign" style="display: block" onclick="remove()">Delete selected items</div>
                 </div>
             </div>
         </div>
@@ -38,7 +25,19 @@
                 'blob.json',
                 'bleeep.ogg',
                 'THIS-picture.jpeg',
-                ''
+                'pr0n.bag',
+                'shit.bag',
+                'backup.bag',
+                'untitled',
+                'Zoooooooo000000ooOoOo0o0.m',
+                'tea.bag',
+                'bea.jpeg',
+                'music-bot.tutorial',
+                '#problem.board',
+                'PeterNudes.bag',
+                'untitled1',
+                '.gitignore(1)',
+                'bagOfBags.bag.bag.bag.bag'
             ]};
         }
         var $itemContainer = $('#recycleItems');
@@ -46,7 +45,7 @@
         {
             var oneItem = 
             `
-            <div class="desktopIcon" style="float: left; padding: 10px" onclick="select($(this))">
+            <div class="desktopIcon binItem" style="float: left; padding: 10px" onclick="select($(this))">
                 <div class="container">
                     <div class="row" style="margin-bottom: 10px;">
                         <div class="col-12 rowNoPaddingOrMargin verticalAlign" style="margin: 5px">
@@ -55,13 +54,17 @@
                     </div>
                     <div class="row">
                         <div class="col-12 verticalAlign rowNoPaddingOrMargin">
-                            <span class="color: white; text-shadow: 0px 0px 2px black;">${item}</span>
+                            <span style="color: white; text-shadow: 0px 0px 2px black;">${item}</span>
                         </div>
                     </div>
                 </div>
             </div>
             `
             $itemContainer.append(oneItem);
+        }
+        if (_applicationState['recycleBin']['items'].length == 0)
+        {
+            $itemContainer.append('<span style="color: white; text-shadow: 0px 0px 2px black;">Empty</span>')
         }
             
         function select($element)
@@ -82,7 +85,14 @@
                     _applicationState['recycleBin']['items'].splice(index, 1);
                     SpaceAdd(text.length, true);
                 }
+                
                 $element.remove();
+                if (_applicationState['recycleBin']['items'].length == 0)
+                {
+                    $itemContainer.append('<span style="color: white; text-shadow: 0px 0px 2px black;">Empty</span>')
+                }
+                _applications.recycleBin.icon = 'http://icons.iconarchive.com/icons/wwalczyszyn/iwindows/128/Recycle-Bin-icon.png';
+                IconsReload();
             }
         }
     </script>

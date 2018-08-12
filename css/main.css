@@ -184,6 +184,7 @@ html {
 }
 
 .desktopIcon {
+    word-wrap: break-word;
     width: 100px;
     height: 140px;
     margin: auto;
@@ -193,6 +194,11 @@ html {
     text-shadow: 0px 0px 2px black;
     text-align: center;
     margin-top: 15px;
+}
+
+.binItem {
+    word-break: break-all;
+    overflow: hidden;
 }
 
 .desktopIcon:hover {

@@ -8,7 +8,6 @@
             console.log('-- Notes Installed --');
             AppSetInstalled('notesInstaller', false);
             AppSetInstalled('notes', true);
-            _applications['notes']['installed'] = true;
             $.get( "data/docs.txt", function( data ) {
                 _applicationState['notes'] = {
                     "content": data
