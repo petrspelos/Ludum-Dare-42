@@ -6,7 +6,6 @@ var _applications = {
         "installer": false,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/book-bookmark-icon.png",
-        "onInstalled": () => { },
         "onUninstalled": () => { }
     },
     "settings-start": {
@@ -16,7 +15,6 @@ var _applications = {
         "installer": false,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/wrench-screwdriver-icon.png",
-        "onInstalled": () => { },
         "onUninstalled": () => { }
     },
     "console": {
@@ -26,7 +24,6 @@ var _applications = {
         "installer": false,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/dakirby309/simply-styled/128/Default-Programs-icon.png",
-        "onInstalled": () => { },
         "onUninstalled": () => { }
     },
     "dummy": {
@@ -36,7 +33,6 @@ var _applications = {
         "installer": false,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/heart-icon.png",
-        "onUninstalled": () => { },
         "onInstalled": () => { } 
     },
     "notesInstaller": {
@@ -46,7 +42,6 @@ var _applications = {
         "installer": true,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/book-bookmark-icon.png",
-        "onInstalled": () => { },
         "onUninstalled": () => { }
     }
 }
