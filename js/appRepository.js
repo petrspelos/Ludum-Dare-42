@@ -138,6 +138,24 @@ var _applications = {
         "icon": "http://icons.iconarchive.com/icons/designcontest/ecommerce-business/256/store-icon.png",
         "onUninstalled": () => { }
     },
+    "eyesInstaller": {
+        "friendlyName": "Eyes Installer",
+        "size": 25,
+        "installed": false,
+        "installer": true,
+        "protected": false,
+        "icon": "http://icons.iconarchive.com/icons/papirus-team/papirus-apps/128/aegisub-icon.png",
+        "onUninstalled": () => { }
+    },
+    "eyes": {
+        "friendlyName": "Eyes",
+        "size": 150,
+        "installed": false,
+        "installer": false,
+        "protected": false,
+        "icon": "http://icons.iconarchive.com/icons/papirus-team/papirus-apps/128/aegisub-icon.png",
+        "onUninstalled": () => { }
+    },
     "recycleBin": {
         "friendlyName": "Recycle Bin",
         "size": 1,
