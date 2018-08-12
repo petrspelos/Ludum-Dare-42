@@ -4,11 +4,12 @@
             <div class="alert alert-primary" role="alert">               
                 <p id="systemSetting" class="btn btn-primary" onclick="WindowCreateFromTemplate('settings-start')">System-Settings</p>
                 >>
-                <p class"breadcrumb-">Uninstall Applications</p>
+                <p class"breadcrumb-">Application Overview</p>
             </div>
         </div>
-        <div class="col-12">
-            <div id="uninstallContent" class="form-group">
+        <div id="systemInfo" class="col-12 rowNoPaddingOrMargin" style="padding:15px"></div>
+        <div class="col-12 rowNoPaddingOrMargin" >
+            <div id="showSizes" class="form-group">
                 
             </div>
         </div>
@@ -20,7 +21,10 @@
         });
         function _UpdateWindow()
         {
-            let $content = $('#uninstallContent');
+            let $sysInfo = $('#systemInfo');
+            $sysInfo.empty();
+            $sysInfo.append(`<span class="text-white" style="text-align:center">Total size:${SpaceStringify(Space.max)} | Used: ${SpaceStringify(Space.used)} (${SpaceToPercentageOfTotalStorage(Space.used)}%) | Free: ${SpaceStringify(Space.free)} (${SpaceToPercentageOfTotalStorage(Space.free)}%)</span>`);
+            let $content = $('#showSizes');
             $content.empty();
             let apps = AppsGetAllInstalled();
             for (let app in apps)
@@ -34,12 +38,12 @@
                         <div class="col-1 rowNoPaddingOrMargin">
                             <img src="${app.icon}"class="verticalAlign" style="height:60px; width:60px;"></img>
                         </div>
-                        <div class="col-10 verticalAlign rowNoPaddingOrMargin">
+                        <div class="col-9 verticalAlign rowNoPaddingOrMargin">
                             <p style="text-align:center">${app.friendlyName}</p>
                         </div>
-                        <button class="col-1 rowNoPaddingOrMargin btn btn-primary text-white" style="padding:2px" onclick="_RemoveApp('${appName}')">
-                            X
-                        </button>
+                        <div class="col-2 rowNoPaddingOrMargin text-white verticalAlign" style="padding:2px">
+                            <span>${SpaceStringify(app.size)} (${SpaceToPercentageOfTotalStorage(app.size)}%)</span>
+                        </div>
                     </div>
                 </div>
                 `;

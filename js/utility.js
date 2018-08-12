@@ -51,6 +51,11 @@ function WindowClearTemplate()
     _WindowClearTemplate();
 }
 
+function AppIsInstalled(appName)
+{
+    return _applications[appName]['installed'];
+}
+
 function AppSetInstalled(appName, installed)
 {
     let app = _applications[appName];
@@ -187,4 +192,9 @@ function PlaySoundWithRandomFrequency(fileName)
 function PlaySound(fileName, volOverload)
 {
     _PlaySound(fileName, volOverload);
+}
+
+function SpaceToPercentageOfTotalStorage(amount)
+{
+    return Math.round((10000*amount)/Space.max)/100;
 }

@@ -158,7 +158,7 @@ var _applications = {
     },
     "other": {
         "friendlyName": "other sources of space usage / space unusage",
-        "size": -1000000,
+        "size": -0,
         "installed": true,
         "installer": false,
         "protected": true,
@@ -199,6 +199,15 @@ var _applications = {
         "installer": false,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/wwalczyszyn/iwindows/128/Recycle-Bin-Full-icon.png",
+        "onUninstalled": () => { }
+    },
+    "settings-appOverview": {
+        "friendlyName": "Application Overview",
+        "size": 1,
+        "installed": true,
+        "installer": false,
+        "protected": false,
+        "icon": "http://icons.iconarchive.com/icons/hopstarter/sleek-xp-basic/128/Applications-Cascade-icon.png",
         "onUninstalled": () => { }
     }
 }

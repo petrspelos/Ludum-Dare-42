@@ -209,6 +209,12 @@ html {
     background-color: #F2E3D5;
 }
 
+.applicationContainer {
+    border-style: solid;
+    border-radius: 15px;
+}
+
+
 .applicationContainer:hover {
     background-color: #F2F2F0;
 }
