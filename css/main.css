@@ -48,7 +48,6 @@ html {
     margin: auto;
     padding: 5px;
     overflow: hidden;
-    overflow-y: scroll;
     z-index: 999;
 }
 
