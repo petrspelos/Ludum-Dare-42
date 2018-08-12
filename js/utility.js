@@ -32,8 +32,18 @@ function WindowHide()
 
 function WindowCreateFromTemplate(templateName)
 {
+    let app = _applications[templateName];
+    if(app)
+    {
+        WindowSetHeaderText(app.friendlyName);
+    }
     _WindowShow();
     _WindowCreateFromTemplate(templateName);
+}
+
+function WindowSetHeaderText(text)
+{
+    _WindowSetHeaderText(text);
 }
 
 function WindowClearTemplate()
@@ -74,6 +84,7 @@ function InitIcons()
                 <div class="row" style="margin-bottom: 10px;">
                     <div class="col-12 rowNoPaddingOrMargin verticalAlign">
                         <img src="${app.icon}" width="60" height="60" style="margin: auto"/>
+                        ${app.installer ? '<img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/wrench-screwdriver-icon.png" class="iconBadge">' : ''}
                     </div>
                 </div>
                 <div class="row">
