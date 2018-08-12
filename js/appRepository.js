@@ -33,7 +33,7 @@ var _applications = {
         "installer": false,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/heart-icon.png",
-        "onInstalled": () => { } 
+        "onUnnstalled": () => { } 
     },
     "notesInstaller": {
         "friendlyName": "Install Notes",
@@ -42,6 +42,15 @@ var _applications = {
         "installer": true,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/book-bookmark-icon.png",
+        "onUninstalled": () => { }
+    },
+    "eatThePlant": {
+        "friendlyName": "EAT THE PLANT! =)",
+        "size": 250,
+        "installed": true,
+        "installer": false,
+        "protected": false,
+        "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/cat-icon.png",
         "onUninstalled": () => { }
     }
 }

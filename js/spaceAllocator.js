@@ -42,7 +42,7 @@ function _SpaceGetFreePercentage()
 
 function _SpaceIsFreeSpaceAvailable()
 {
-    return _SpaceGetFree() > 0;
+    return Space.free > 0;
 }
 
 function _SpaceUpdate()
@@ -51,4 +51,6 @@ function _SpaceUpdate()
      Space.used = _SpaceGetUsed(); 
      Space.free = _SpaceGetFree();
      Space.freePercentage = _SpaceGetFreePercentage();
+     if (_SpaceIsFreeSpaceAvailable() == false)
+        GameOver();
  }
