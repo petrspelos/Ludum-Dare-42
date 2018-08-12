@@ -112,11 +112,6 @@ function AvocadoInstall(appData)
     _AvocadoInstall(appData);
 }
 
-function DesktopAddIcon(name, icon, template)
-{
-    _DesktopAddIcon(name, icon, template);
-}
-
 function GameOver()
 {
     _GameOver();
