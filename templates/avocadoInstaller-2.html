@@ -1,3 +1,17 @@
+<script>
+    function StartInstallation()
+    {
+        let $jumbo = $("#installerJumbotron");
+        $jumbo.empty();
+        $jumbo.append('<h1 class="display-4"> <i class="fas fa-spinner fa-spin"></i> Installing... </h1>');
+        
+        CallAfterSeconds(() => {
+            WindowCreateFromTemplate('avocadoInstaller-3'); 
+        }, _applicationState['AvocadoInstaller'].installLength);
+
+    }
+</script>
+
 <div class="container">
     <div class="row">
         <div class="col-12">
@@ -8,7 +22,7 @@
                 <hr class="my-4">
                 <p>If you do not accept these Terms of Service, the application will not be installed.</p>
                 <button type="button" class="btn btn-danger" onclick="WindowHide();">Decline</button>
-                <button type="button" class="btn btn-success" onclick="WindowCreateFromTemplate('avocadoInstaller-3');">Accept</button>
+                <button type="button" class="btn btn-success" onclick="StartInstallation();">Accept</button>
             </div>
         </div>
     </div>
