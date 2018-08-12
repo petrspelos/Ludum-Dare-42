@@ -72,9 +72,19 @@ function AppsGetAllInstalled()
 
 function AppUninstall(appName)
 {    
-    _applications[appName].onUninstalled();
+    let app = _applications[appName];
+    app.onUninstalled();
+    NotificationShow('Uninstaller', `${appName} has been successfully uninstalled!`, app.icon);
     AppSetInstalled(appName, false);
+    SpaceAdd(app.size, true);
     IconsReload();   
+}
+
+function SpaceAdd(amount, countForScore=false)
+{
+    if (countForScore)
+        Space.saved += amount;
+    _applications['other'].size -= amount;
 }
 
 function IconsReload()
@@ -85,6 +95,7 @@ function IconsReload()
     for (let appName in apps)
     {
         let app = apps[appName];
+        if (app.protected) continue;
         let appIcon =
         `
         <div class="desktopIcon" style="float: left; padding: 10px" onclick="WindowCreateFromTemplate('${appName}');">

@@ -1,7 +1,6 @@
 body {
     margin: 0;
     background-color: #EEEEEE;
-    padding: 1rem;
     min-height: 100%;
     height: 100%;
     font-family: 'Roboto', sans-serif;
@@ -149,6 +148,7 @@ html {
 }
 
 #notificationBar {
+    z-index: 999;
     position: absolute;
     display: flex;
     flex-direction: column-reverse;
@@ -212,4 +212,9 @@ html {
     position: absolute;
     left: 45px;
     top: 35px;
+}
+
+.updateSpinner {
+    font-size: 30px;
+    margin-right: 20px;
 }

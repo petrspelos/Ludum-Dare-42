@@ -29,6 +29,7 @@ $(document).ready(function()
 
 function Update()
 {
+    _UpdaterTick();
     _TaskbarUpdateTime();
     _SpaceUpdate();
 }

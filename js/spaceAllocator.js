@@ -15,6 +15,7 @@ function _SpaceGetMax()
     for (let app in  _applications)
     {
         app = _applications[app];
+        if (app.protected) continue;
         storage += app.size;
     }
     return storage;
