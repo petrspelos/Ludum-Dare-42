@@ -2,7 +2,7 @@ var _applications = {
     "update": {
         "friendlyName": "",
         "size": 0,
-        "installed": false,
+        "installed": true,
         "installer": false,
         "protected": true,
         "icon": "",

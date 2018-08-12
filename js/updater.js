@@ -1,6 +1,6 @@
 var secondsElapsed = 0;
-var updateIncrement = 1;
-var sizeDoubleInSec = 10;
+var updateIncrement = 0.5;
+var sizeDoubleInSec = 15;
 var sizeNewFileInSec = 3;
 
 function _UpdaterTick()
@@ -9,8 +9,8 @@ function _UpdaterTick()
 
     if(secondsElapsed % sizeDoubleInSec === 0)
     {
-        updateIncrement *= 2;
-        sizeDoubleInSec *= 2;
+        updateIncrement *= 1.5;
+        sizeDoubleInSec *= 1.5;
     }
 
     if(secondsElapsed % sizeNewFileInSec === 0)
