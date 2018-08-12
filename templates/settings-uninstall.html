@@ -55,7 +55,7 @@
         
         function _RemoveApp(appName)
         {
-            AppUninstall(appName);
+            AppSetInstalled(appName, false);
             _UpdateWindow();         
         }
     </script>

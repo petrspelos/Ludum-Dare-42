@@ -51,9 +51,28 @@ function WindowClearTemplate()
     _WindowClearTemplate();
 }
 
-function AppSetInstalled(app, installed)
+function AppSetInstalled(appName, installed)
 {
-    _applications[app]['installed'] = installed;
+    let app = _applications[appName];
+    if (installed == true)
+    {
+        app['installed'] = true;
+        Space.saved -= app.size;
+        NotificationShow('Installer', `${appName} has successfully been installed ~ just for you <3!`, app.icon);
+    }
+    else 
+    {
+        if (app.onUninstalled == undefined)
+        {
+            NotificationShow("Uninstaller", `Ehhhhm... hmm... seems like I have no powah here... Unable to uninstall ${appName}.`)
+            return;
+        }
+        app['installed'] = false;
+        Space.saved += app.size;
+        app.onUninstalled();
+        NotificationShow('Uninstaller', `${appName} has been successfully uninstalled!`, app.icon);
+    }        
+    IconsReload();
 }
 
 
@@ -68,16 +87,6 @@ function AppsGetAllInstalled()
             appList[appNa] = app;
     }
     return appList;
-}
-
-function AppUninstall(appName)
-{    
-    let app = _applications[appName];
-    app.onUninstalled();
-    NotificationShow('Uninstaller', `${appName} has been successfully uninstalled!`, app.icon);
-    AppSetInstalled(appName, false);
-    SpaceAdd(app.size, true);
-    IconsReload();   
 }
 
 function SpaceAdd(amount, countForScore=false)
