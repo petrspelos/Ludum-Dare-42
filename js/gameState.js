@@ -21,7 +21,7 @@ function _GameOver()
     $("#timePlayed").text(secondsElapsed);
     $("#spaceFreed").text(SpaceStringify(Space.saved));
     clearInterval(updateLoop);
-    _PlaySound("bluescreen.wav", 0.1);
+    PlaySound("bluescreen.wav", 0.1);
 }
 
 function _SetupGameLoop()

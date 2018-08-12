@@ -201,10 +201,19 @@ var _applications = {
         "icon": "http://icons.iconarchive.com/icons/wwalczyszyn/iwindows/128/Recycle-Bin-Full-icon.png",
         "onUninstalled": () => { }
     },
+    "settings-appOverviewInstaller": {
+        "friendlyName": "Application Overview Installer",
+        "size": 1,
+        "installed": false,
+        "installer": true,
+        "protected": false,
+        "icon": "http://icons.iconarchive.com/icons/hopstarter/sleek-xp-basic/128/Applications-Cascade-icon.png",
+        "onUninstalled": () => { }
+    },
     "settings-appOverview": {
         "friendlyName": "Application Overview",
         "size": 1,
-        "installed": true,
+        "installed": false,
         "installer": false,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/hopstarter/sleek-xp-basic/128/Applications-Cascade-icon.png",
