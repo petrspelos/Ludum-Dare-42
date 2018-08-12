@@ -97,7 +97,7 @@ function IconsReload()
                 </div>
                 <div class="row">
                     <div class="col-12 verticalAlign rowNoPaddingOrMargin">
-                        <span class="color: white; text-shadow: 0px 0px 2px black;">${app.friendlyName}</span>
+                        <span style="color: white; text-shadow: 0px 0px 2px black; width: 100%;">${app.friendlyName}</span>
                     </div>
                 </div>
             </div>
