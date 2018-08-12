@@ -1,11 +1,10 @@
 class Achievement
 {
-    constructor(title, description, iconUrl, completed)
+    constructor(title, description, iconUrl)
     {
         this.title = title;
         this.description = description;
         this.iconUrl = iconUrl;
-        this.completed = completed;
     }
 }
 
@@ -30,7 +29,7 @@ class Achievements
         for(let index in this.all)
         {
             let ach = this.all[index];
-            let achObj = new Achievement("", "", "", false);
+            let achObj = new Achievement("", "", "");
             this.all[index] = Object.assign(achObj, ach);
         }
     }
