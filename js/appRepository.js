@@ -129,6 +129,15 @@ var _applications = {
         "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/cat-icon.png",
         "onUninstalled": () => { }
     },
+    "appStore": {
+        "friendlyName": "App store",
+        "size": 25,
+        "installed": true,
+        "installer": false,
+        "protected": false,
+        "icon": "http://icons.iconarchive.com/icons/designcontest/ecommerce-business/256/store-icon.png",
+        "onUninstalled": () => { }
+    },
     "recycleBin": {
         "friendlyName": "Recycle Bin",
         "size": 1,

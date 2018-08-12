@@ -202,6 +202,14 @@ html {
     background-color: #F2E3D5;    
 }
 
+.applicationContainer:hover {
+    background-color: #F2F2F0;
+}
+
+.applicationContainer:active {
+    background-color: #F2E3D5;    
+}
+
 .alert-primary p {
     display: inline;
 }
@@ -222,4 +230,8 @@ html {
 .updateSpinner {
     font-size: 30px;
     margin-right: 20px;
+}
+
+.selected {
+    background-color: red;
 }

@@ -63,7 +63,10 @@ function AppSetInstalled(appName, installed)
     else 
     {
         if (app.onUninstalled == undefined)
+        {
+            NotificationShow("Uninstaller", `Ehhhhm... hmm... seems like I have no powah here... Unable to uninstall ${appName}.`)
             return;
+        }
         app['installed'] = false;
         Space.saved += app.size;
         app.onUninstalled();
