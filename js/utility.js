@@ -46,6 +46,20 @@ function AppSetInstalled(app, installed)
     _applications[app]['installed'] = installed;
 }
 
+
+function AppsGetAllInstalled()
+{
+    let appList = [];
+    for (let appNa in _applications)
+    {
+        if (_applications.hasOwnProperty(appNa) == false) continue;
+        var app = _applications[appNa];
+        if (app['installed'])
+            appList.push(app);
+    }
+    return appList;
+}
+
 function AvocadoInstall(appData)
 {
     _AvocadoInstall(appData);
