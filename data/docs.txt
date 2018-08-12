@@ -1,10 +1,13 @@
-This is my documentation...
+Welcome to WinDOORS! 😁
 
-It is pretty cool.
+You are on a computer running a rather old build of WinDOORS OS. Lucky for you, the computer is currently installing a newer build for you. However, it seems that you do not have enough disk space to download the whole update! You must act quickly before you have a hard drive failure.
 
-And I like it.
+🚩 The goal 🚩
+Your goal is to clear up as much memory as you can before the disk space reaches 0.
 
-_   _
-x   x
-  L
-  _
+❓ How to play ❓
+• Install new applications to assist you in clearing disk space by browsing the App Store.
+
+• Every file takes disk space (including this file). Browse files with the File Explorer and uninstall files by (right clicking them and hitting uninstall?)
+
+• Open applications and files by left-clicking them on your desktop.
