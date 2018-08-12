@@ -1,0 +1,25 @@
+<script>
+    var applicationToInstall = {
+        "name": "settings-appOverview",
+        "installLength": 4,
+        "ToS": "You agree to only overview files that are legal to have installed in your contry of residence",
+        "callback": function () {
+            AppSetInstalled('settings-appOverview', true);
+            IconsReload();
+        }
+    }
+</script>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="jumbotron jumbotron-fluid" style="background-image: url('https://thumbs.gfycat.com/InexperiencedNaturalBustard-size_restricted.gif'); background-size: cover; color: white; text-shadow: 0px 0px 3px black;">
+                <div class="container">
+                    <h1 class="display-4">You are about to install Application Overview</h1>
+                    <p class="lead">The easiest way to look a bit closer on your applications</p>
+                </div>
+            </div>
+            <button type="button" class="btn btn-danger" onclick="WindowHide();">Cancel</button>
+            <button type="button" class="btn btn-success" onclick="AvocadoInstall(applicationToInstall);">Install</button>
+        </div>
+    </div>
+</div>
