@@ -1,4 +1,13 @@
 var _applications = {
+    "update": {
+        "friendlyName": "",
+        "size": 0,
+        "installed": false,
+        "installer": false,
+        "protected": true,
+        "icon": "",
+        "onUninstalled": () => { }
+    },
     "notes": {
         "friendlyName": "Notes",
         "size": 15,
