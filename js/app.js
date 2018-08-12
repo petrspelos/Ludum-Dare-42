@@ -20,7 +20,7 @@
 $(document).ready(function()
 {
     //_InitiateStartupSequence();
-    
+
     Update();
     setInterval(Update, 30000);
     WindowHide();
