@@ -91,6 +91,19 @@ function AppsGetAllInstalled()
     return appList;
 }
 
+function AppsGetAllUninstalledInstallers()
+{
+    let appList = {};
+    for (let appNa in _applications)
+    {
+        if (_applications.hasOwnProperty(appNa) == false) continue;
+        var app = _applications[appNa];
+        if (app['installed'] == false && app['installer'])
+            appList[appNa] = app;
+    }
+    return appList;
+}
+
 function CallAfterSeconds(callback, seconds)
 {
     clearTimeout(InstallerTimeout);

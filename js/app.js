@@ -23,6 +23,11 @@ $(document).ready(function()
 
     IconsReload();
     Update();
+    $.get( "data/docs.txt", function( data ) {
+        _applicationState['notes'] = {
+            "content": data
+        }
+    });
     
     // Uncomment this when StartBootSequence is commented out & vice versa
     updateLoop = setInterval(Update, 1000);
