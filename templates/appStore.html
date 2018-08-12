@@ -1,38 +1,55 @@
 <div class="container">
         <div class="row">
             <div class="col-12">
-                <div id="appStore" class="form-group"></div>
+                <div id="appStore" class="form-group row"></div>
+                <span class="row" style="color: white; text-shadow: 1px 1px 2px black; margin: 0; padding: 0;">
+                    <u>NOTE:</u><br>
+                    To install an application you need to download the installer here and run it.
+                    Every Application-Installer has the same size as the application it will install.
+                    So the total space requirement to install an application is twice the size of the installer.<br>
+                    Installer can be uninstalled after successfully installing an application.
+                </span>                
             </div>
         </div>
         <script>
-            var uninstalledInstallers = AppsGetAllUninstalledInstallers();
-            var $container = $('#appStore');
-            for (let installerName in uninstalledInstallers)
+            UpdateStore();
+            function UpdateStore()
             {
-                console.log("yeet");
-                let installer = uninstalledInstallers[installerName];
-                let html = 
-                `
-                <div class="applicationContainer" style="float: left; padding: 10px; width: 180px; height: 180px;" onclick="InstallInstaller('${installerName}')">
-                    <div class="container">
-                        <div class="row" style="margin-bottom: 10px;">
-                            <div class="col-12 rowNoPaddingOrMargin verticalAlign" style="margin: 5px">
-                                <img src="${installer.icon}" width="100px" height="100px" style="margin: auto"/>
+                var uninstalledInstallers = AppsGetAllUninstalledInstallers();
+                var $container = $('#appStore');
+                $container.empty();
+                for (let installerName in uninstalledInstallers)
+                {
+                    let installer = uninstalledInstallers[installerName];
+                    let html = 
+                    `
+                    <div class="applicationContainer" style="float: left; padding: 10px; width: 180px; height: 180px;" onclick="InstallInstaller('${installerName}')">
+                        <div class="container">
+                            <div class="row rowNoPaddingOrMargin" style="padding:0px; margin:0px">
+                                <span class="row rowNoPaddingOrMargin" style="text-align: center; color: white; text-shadow: 1px 1px 1px black, 1px 1px 2px black, 1px 1px 4px black; margin: 0; padding: 0; height:24px; z-index:+1;">
+                                    <u>${installer.friendlyName}</u>
+                                </span>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-12 verticalAlign rowNoPaddingOrMargin">
-                                <span style="text-align: center; color: white; text-shadow: 0px 0px 2px black; margin: 0; padding: 0;">${installer.friendlyName}</span>
+                            <div class="row rowNoPaddingOrMargin" style="margin-bottom: 10px;">
+                                <div class="col-12 rowNoPaddingOrMargin verticalAlign">
+                                    <img src="${installer.icon}" width="100px" height="100px" style="margin: auto"/>
+                                </div>
+                            </div>
+                            <div class="row rowNoPaddingOrMargin">
+                                <div class="col-12 rowNoPaddingOrMargin" >                                   
+                                    <span class="row rowNoPaddingOrMargin" style="text-align: center; color: white; text-shadow: 0px 0px 2px black; margin: 0; padding: 0;">${SpaceStringify(installer.size)}  (${SpaceToPercentageOfTotalStorage(installer.size)}%)</span>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                `;
-                $container.append(html);
-             }
+                    `;
+                    $container.append(html);                    
+                }
+            }
             function InstallInstaller(instName)
             {
                 AppSetInstalled(instName, true);
+                UpdateStore();
             }
         </script>
     </div>

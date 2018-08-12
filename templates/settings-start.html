@@ -35,10 +35,27 @@
                         </div>
                     </div>
                 </div>
+                <div id="appOverview" class="desktopIcon" style="float: left; padding: 10px; visibility: hidden;" onclick="WindowCreateFromTemplate('settings-appOverview');">
+                    <div class="container">
+                        <div class="row" style="margin-bottom: 10px;">
+                            <div class="col-12 rowNoPaddingOrMargin verticalAlign" style="margin: 5px">
+                                <img src="http://icons.iconarchive.com/icons/hopstarter/sleek-xp-basic/128/Applications-Cascade-icon.png" width="60" height="60" style="margin: auto"/>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12 verticalAlign rowNoPaddingOrMargin">
+                                <span style="color: white; text-shadow: 0px 0px 2px black;">Application Overview</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
     <script>
-         
+         if (_applications['settings-appOverview']['installed'])
+         {
+             $('#appOverview').css("visibility", "visible");
+         }
     </script>
 </div>

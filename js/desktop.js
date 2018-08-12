@@ -8,5 +8,6 @@ function _TaskbarUpdateTime()
 {
     let $taskbarTime = $('#taskbarTime');
     let date = new Date();
-    $taskbarTime.text(`${date.getHours()}:${date.getMinutes()}`);
+    let minutes = 
+    $taskbarTime.text(`${date.getHours()}:${date.getMinutes()<10?`0`+date.getMinutes():date.getMinutes()}`);
 }

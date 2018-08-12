@@ -51,6 +51,11 @@ function WindowClearTemplate()
     _WindowClearTemplate();
 }
 
+function AppIsInstalled(appName)
+{
+    return _applications[appName]['installed'];
+}
+
 function AppSetInstalled(appName, installed)
 {
     let app = _applications[appName];
@@ -177,4 +182,9 @@ function SpaceStringify(input)
         type = 'Gb'
     }
     return `${input} ${type}`;
+}
+
+function SpaceToPercentageOfTotalStorage(amount)
+{
+    return Math.round((10000*amount)/Space.max)/100;
 }
