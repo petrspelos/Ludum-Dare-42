@@ -2,17 +2,27 @@ Welcome to WinDOORS! 😁
 
 You are on a computer running a rather old build of WinDOORS OS. Lucky for you, the computer is currently installing a newer build for you. However, it seems that you do not have enough disk space to download the whole update! You must act quickly before you have a hard drive failure.
 
+
 🚩 The goal 🚩
-Your goal is to clear up as much memory as you can before the disk space reaches 0.
+Your goal is to clear up as much memory as you can before the disk space reaches 0. 
+Try to survive as long as possible, and most importantly, have fun!
 
-❓ How to play ❓
-• Install new applications to assist you in clearing disk space by browsing the App Store.
 
-• Every application takes disk space (including this app). Uninstall apps by going into the System settings and clicking Uninstall Applications. Choose which apps to uninstall wisely, as you may need them in the future, and re-installing can take a lot of time.
+❓ What can I do ❓
 
 • Open applications by left-clicking them on your desktop.
+
+• Remove files from the thrash bin to clear up some space.
+
+• Uninstall big applications by clicking System Settings > Uninstall Applications. Uninstall apps by going into the System settings and clicking Uninstall Applications. Choose which apps to uninstall wisely, as you may need them in the future, and re-installing can take a lot of time.
+
+• Install new applications from the App Store to assist you in clearing disk space.
+
+• Hunt for achievements
 
 
 ℹ Other information ℹ
 
 For the best experience, play with audio enabled.
+
+Try out all the applications! Most of them are not as useless as you would think!

@@ -100,7 +100,7 @@ html {
     overflow-y: scroll;
 }
 
-#achievementScreen .achievement
+#achievementScreen .achievementListItem
 {
     margin: auto;
     width: 90%;
