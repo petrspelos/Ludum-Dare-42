@@ -18,6 +18,8 @@ Try to survive as long as possible, and most importantly, have fun!
 
 • Install new applications from the App Store to assist you in clearing disk space.
 
+• Remove viruses by scanning with the VirusButcher.
+
 • Hunt for achievements
 
 

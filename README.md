@@ -26,6 +26,8 @@ Uninstall big applications by clicking System Settings > Uninstall Applications.
 
 Install new applications from the App Store to assist you in clearing disk space.
 
+Remove viruses by scanning with the VirusButcher.
+
 ## Links
 Game: https://petrspelos.github.io/Ludum-Dare-42/
 
