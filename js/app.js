@@ -19,7 +19,7 @@
 
 $(document).ready(function()
 {
-    //StartBootSequence();
+    StartBootSequence();
 
     IconsReload();
     Update();
@@ -30,7 +30,7 @@ $(document).ready(function()
     });
     
     // Uncomment this when StartBootSequence is commented out & vice versa
-    _SetupGameLoop();
+    //_SetupGameLoop();
     
     InitializeAudio();
     WindowHide();

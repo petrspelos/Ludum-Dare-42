@@ -69,7 +69,7 @@ html {
 #startupScreen {
     background-image: url('../img/Blue.jpg');
     width: 100%;
-    z-index: 99999999;
+    z-index: 9999999;
 }
 
 #achievementScreen {

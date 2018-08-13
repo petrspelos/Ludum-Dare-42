@@ -2,34 +2,30 @@
     <div class="row">
         <div class="col-12">
             <div class="alert alert-primary" role="alert">
-                Console
+                JSConsole
             </div>
         </div>
         <div class="col-12">
             <div class="form-group" style="display:block">
                 <textarea class="output" id="output" rows="15" style="width:100%"></textarea>
-                <textarea class="input" id="input" rows="1" style="width:100%"></textarea>
+                <textarea class="input" id="input" rows="1" style="width:100%" placeholder="Command here like (3+2)"></textarea>
             </div>
         </div>
     </div>
     <script>
         let $input = $('#input');
         let $output = $('#output');
-        console.log($input.val());
-        // NOT FINISHED! WORKS BUT IS SHITTY AND DOESN'T ALWAYS (NEVER? xD) GIVES CORRECT OUPUT IF NOT VALID CODE!
         $input.keypress(function(e) 
         {
             var key = e.which;
             if (key != 13) return;
             var inputString = $input.val();
-            $output.val($output.val() + '\n' + inputString);
-            $input.val('');
-            var outputString = eval(inputString);
-            if (outputString)
-                $output.val($output.val() + '\n' + outputString);
-            else
-                $output.val($output.val() + '\n"' + inputString + '" resulted in an error.');
-                
-        })    
+            $output.val($output.val() + inputString.trim() + "\n");
+            $input.val("");
+            var outputString = eval(inputString.trim());
+            $output.val($output.val()+ JSON.stringify(outputString) + "\n");
+            var textarea = document.getElementById('output');
+            textarea.scrollTop = textarea.scrollHeight;
+        })
     </script>
 </div>
