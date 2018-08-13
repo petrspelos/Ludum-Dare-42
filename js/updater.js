@@ -6,6 +6,8 @@ var sizeNewFileInSec = 3;
 var virusActionInterval = 9;
 var virusDefectionPercentage = 50;
 
+var virusInfectionCounter = 0;
+
 function _UpdaterTick()
 {
     secondsElapsed++;
@@ -59,6 +61,9 @@ function RandomVirusInstallationCheck()
 
     if(virusRoll > virusDefectionPercentage)
     {
+        virusInfectionCounter++;
+        if (virusInfectionCounter === 1)
+            AchievementCompleteById("infected");
         AppSetInstalled(randomVirusID, true);
     }
 }

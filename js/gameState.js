@@ -17,6 +17,12 @@ function _StartBootSequence()
 
 function _GameOver()
 {
+    var viruses = AppsGetAllInstalledViruses();
+    if (Object.keys(viruses).length == 0)
+        AchievementCompleteById("virusFree");        
+    if (Object.keys(viruses).length >= 3)
+        AchievementCompleteById("doomed");
+
     $("#endScreen").css("display", "block");
     $("#timePlayed").text(secondsElapsed);
     $("#spaceFreed").text(SpaceStringify(Space.saved));

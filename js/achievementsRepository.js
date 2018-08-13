@@ -11,7 +11,7 @@ var _achievementRepo = {
     },
     "doomed": {
         "title": "DOOOMED!",
-        "description": "End a Session with at least two Viruses on your PC.",
+        "description": "End a Session with at least three Viruses on your PC.",
         "iconUrl": "http://icons.iconarchive.com/icons/hopstarter/malware/128/Radioactive-icon.png"
     },
     "indecisive": {
@@ -42,7 +42,7 @@ var _achievementRepo = {
     "seriouslyPointless": {
         "title": "Seriously, it's pointless.",
         "description": "Click the start button 50 times",
-        "iconUrl": "http://icons.iconarchive.com/icons/everaldo/crystal-clear/128/Filesystem-file-broken-icon.png"
+        "iconUrl": "http://icons.iconarchive.com/icons/emoticonshd.com/emoji/64/Emoticon-Thinking-Confused-Shrug-icon.png"
     },
     "novelist": {
         "title": "Novelist",
