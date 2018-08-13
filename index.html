@@ -118,6 +118,7 @@
                     </h2>
                     <p id="endScreenStats">
                         Thank you very much for playing our game. <br />
+                        You have completed <span id="achievementsCompleted">0</span> out of <span id="totalAchievements">999</span> achievements. <a onclick="ShowAchievementsPage()" href="#">Click here to see all achievements</a> <br />
                         You cleared up <span id="spaceFreed">0b</span> and survived for <span id="timePlayed">0</span> seconds. <br />
                         If you'd like to play again you can <a href="index.html">POINT_MOUSE_CURSOR_OVER_THIS_AND_CLICK</a> <br />
                         If you'd like to vote/leave a review for this game you can do so at <a href="https://ldjam.com/events/ludum-dare/42/$98887">https://ldjam.com/events/ludum-dare/42/$98887</a>
@@ -127,6 +128,52 @@
             
             <div id="blackScreen" class="fullscreen">
                 <img src="img/Black.jpg" style="width: 100%;">
+            </div>
+
+            <div id="achievementScreen" class="fullscreen">
+                <div id="container">
+                    <h2 id="pageTitle">Achievements</h2>
+                    <div id="achievementList">
+                        <div id="sampleAchievement">
+                            A random achievement
+                        </div>
+                        <div id="sampleAchievement">
+                            A random achievement
+                        </div>
+                        <div id="sampleAchievement">
+                            A random achievement
+                        </div>
+                        <div id="sampleAchievement">
+                            A random achievement
+                        </div>
+                        <div id="sampleAchievement">
+                            A random achievement
+                        </div>
+                        <div id="sampleAchievement">
+                            A random achievement
+                        </div>
+                        <div id="sampleAchievement">
+                            A random achievement
+                        </div>
+                        <div id="sampleAchievement">
+                            A random achievement
+                        </div>
+                        <div id="sampleAchievement">
+                            A random achievement
+                        </div>
+                    </div>
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-sm">
+                                <a href="index.html" class="btn btn-success btn-lg" style="padding-top: 7px">Retry game</a>
+                            </div>
+                            <div class="col-sm">
+                                <a href="https://ldjam.com/events/ludum-dare/42/$98887" target="_blank" class="btn btn-primary btn-lg" style="padding-top: 7px">Rate on ldjam.com</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div id="notificationBar">
@@ -142,6 +189,8 @@
         <!-- scripts -->
         <script src="js/localstorage.js"></script>
         <script src="js/achievements.js"></script>
+        <script src="js/achievementsAPI.js"></script>
+        <script src="js/achievementsRepository.js"></script>
         <script src="js/appRepository.js"></script>
         <script src="js/desktop.js"></script>
         <script src="js/gameState.js"></script>
