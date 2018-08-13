@@ -9,7 +9,7 @@ function _NotificationShow(title, htmlContent, icon)
     
     $notificationBar.append($notificationObject);
 
-    CallAfterSeconds(() => PlaySound("notification.wav", 0.5), 0.5);
+    CallAfterSeconds(() => CreateSound(new SoundObject("notification.wav", 0.5, false)), 0.5);
     
     var tween = TweenLite.to($notificationObject, 2, {
         left: -($notificationObject.width() + 72),

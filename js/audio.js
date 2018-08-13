@@ -1,35 +1,68 @@
-function InitializeAudio()
+activeSoundObjects = [];
+
+class SoundObject
 {
-    soundObj = document.createElement("audio");
-   
+    constructor (file, vol, randomize)
+    {
+        this.soundObject = document.createElement("audio");
+
+        this.soundObject.src = `./sound/${file}`;
+        this.soundObject.volume = vol;
+        this.soundObject.autoPlay = false;
+        this.soundObject.preLoad = true;
+        this.soundObject.controls = true;
+        this.soundObject.playbackRate = 1;
+
+        if (randomize)
+        {
+            this.RandomizeVolumeAndFrequency();
+        }
+
+        this.soundObject.play();
+    }
+
+    Play()
+    {
+        this.soundObject.play();
+    }
+
+    RandomizeVolumeAndFrequency()
+    {
+        this.soundObject.volume = getRandomInt(9, 10) / 10;
+        this.soundObject.playbackRate = getRandomInt(10, 25) / 10;
+    }
+
+    DeleteIfDone()
+    {
+        if (this.soundObject.ended)
+        {
+            $(this.soundObject).remove();
+            let index = activeSoundObjects.indexOf(this);
+            if (index > -1)
+            {
+                activeSoundObjects.splice(index, 1);
+            }
+        }
+    }
+}
+
+function InitializeAudio()
+{   
     // Subscribe keypress to play audio
-    $("html").keydown(() => _PlaySoundWithRandomFrequency("keypress.wav"));
+    $("html").keydown(() => CreateSound(new SoundObject("keypress.wav", 1, true)));
 
     // Subscribe mouse click to play audio
-    $("html").click(() => _PlaySoundWithRandomFrequency("mousepress.wav"));
-    $("html").contextmenu(() => _PlaySoundWithRandomFrequency("mousepress.wav"));
+    $("html").click(() => CreateSound(new SoundObject("mousepress.wav", 1, true)));
+    $("html").contextmenu(() => CreateSound(new SoundObject("keypress.wav", 1, true)));
 }
 
-function _PlaySoundWithRandomFrequency(fileName)
+function CreateSound(sound)
 {
-    soundObj.src = `./sound/${fileName}`;
-    let vol = getRandomInt(8, 10) / 10;
-    soundObj.volume = vol;
-    soundObj.autoPlay = false;
-    soundObj.preLoad = true;
-    soundObj.controls = true;
-    let frequency = getRandomInt(10, 25) / 10;
-    soundObj.playbackRate = frequency;
-    soundObj.play();
-}
+    activeSoundObjects.push(sound);
+    sound.Play();
 
-function _PlaySound(fileName, volOverload)
-{
-    soundObj.src = `./sound/${fileName}`;
-    soundObj.volume = volOverload;
-    soundObj.autoPlay = false;
-    soundObj.preLoad = true;
-    soundObj.controls = true;
-    soundObj.playbackRate = 1;
-    soundObj.play();
+    for(let s of activeSoundObjects)
+    {
+        s.DeleteIfDone();
+    }
 }
