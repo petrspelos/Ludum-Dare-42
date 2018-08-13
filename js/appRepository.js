@@ -237,7 +237,7 @@ var _applications = {
         "installer": false,
         "protected": false,
         "virus": true,
-        "icon": "http://icons.iconarchive.com/icons/gianni-polito/colobrush/128/software-amarok-icon.png",
+        "icon": "http://icons.iconarchive.com/icons/gianni-polito/colobrush/128/software-firefox-icon.png",
         "onUninstalled": () => { },
         "virusAction": () => { 
             setTimeout(NotificationShow, getRandomInt(0, 10000), "YEEEET!", "", "http://icons.iconarchive.com/icons/gianni-polito/colobrush/128/software-firefox-icon.png");
@@ -249,11 +249,11 @@ var _applications = {
     "virus3": {
         "friendlyName": "Switcheroo",
         "size": 10,
-        "installed": true,
+        "installed": false,
         "installer": false,
         "protected": false,
         "virus": true,
-        "icon": "http://icons.iconarchive.com/icons/gianni-polito/colobrush/128/software-amarok-icon.png",
+        "icon": "http://icons.iconarchive.com/icons/raindropmemory/down-to-earth/128/Recycle-1-1-icon.png",
         "onUninstalled": () => {
             _fakeApps = [];
          },
@@ -265,6 +265,33 @@ var _applications = {
             fakeApp.fake = true;
             _fakeApps[randAppId] = fakeApp;
             IconsReload(true);
+        }
+    },
+    "virus4": {
+        "friendlyName": "Garbage-Uncollector",
+        "size": 10,
+        "installed": true,
+        "installer": false,
+        "protected": false,
+        "virus": true,
+        "icon": "http://icons.iconarchive.com/icons/robinweatherall/recycling/128/paper-icon.png",
+        "onUninstalled": () => {},
+        "virusAction": () => {
+            if (_applicationState['recycleBin'] == undefined) return;
+            var amount = getRandomInt(1, 3);
+            for (let i = 0; i < amount; i++) 
+            {
+                var initialFiles = _applicationState['recycleBin']['initialItems'];
+                var randItem = initialFiles[getRandomInt(0, initialFiles.length)];
+                //if (_applicationState['recycleBin']['items'].indexOf(randItem) > -1) continue;
+                if (_applicationState['recycleBin']['items'].length == 0)
+                {
+                    _applications.recycleBin.icon = 'http://icons.iconarchive.com/icons/wwalczyszyn/iwindows/128/Recycle-Bin-Full-icon.png';
+                    IconsReload();
+                }                    
+                _applicationState['recycleBin']['items'].push(randItem);
+                SpaceAdd(-randItem.length, true);
+            }
         }
     }
 };
