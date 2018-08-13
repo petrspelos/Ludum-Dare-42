@@ -1,7 +1,14 @@
+ChangedWallpaperCount = 0;
+
 function _DesktopSetWallpaper(url)
 {
     let $desktopWrapper = $('#desktopWrapper');
     $desktopWrapper.css('background-image', 'url("' + url + '")');
+    ChangedWallpaperCount++;
+    if(ChangedWallpaperCount >= 10)
+    {
+        AchievementCompleteById("indecisive");
+    }
 }
 
 function _TaskbarUpdateTime()

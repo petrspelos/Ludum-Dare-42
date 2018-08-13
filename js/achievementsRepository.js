@@ -13,5 +13,10 @@ var _achievementRepo = {
         "title": "DOOOMED!",
         "description": "End a Session with at least two Viruses on your PC.",
         "iconUrl": "http://icons.iconarchive.com/icons/hopstarter/malware/128/Radioactive-icon.png"
+    },
+    "indecisive": {
+        "title": "Indecisive",
+        "description": "Change your wallpaper 10 times.",
+        "iconUrl": "http://icons.iconarchive.com/icons/dakirby309/simply-styled/128/Picture-Viewer-icon.png"
     }
 }
