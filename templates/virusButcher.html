@@ -43,7 +43,7 @@
                     Scan every file in your computer for viruses in a matter of seconds. <br />
                     We use the latest nanotechnology to speed up the search to waste as little of your time as possible. <br />
                 </p>
-                <button type="button" class="btn btn-dark btn-lg" style="width:80%; margin:auto;">Scan now</button>
+                <button type="button" class="btn btn-dark btn-lg" style="width:80%; margin:auto;" onclick="revealViruses()">Scan now</button>
             </div>
             <div class="card-footer text-muted">
                 © VirusButcher v3.93 2018
@@ -52,6 +52,14 @@
     </div>
 
     <script>
+        function revealViruses()
+        {
+            let viruses = AppsGetAllInstalledViruses();
+            for (let virusId in viruses)
+            {
+                viruses[virusId].virus = false;
+            }
+        }
         function premium()
         {
             document.getElementById("virusButcherBackground").setAttribute("style", "background-color: fuchsia");

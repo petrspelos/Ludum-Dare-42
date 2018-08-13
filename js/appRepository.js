@@ -229,5 +229,21 @@ var _applications = {
         "icon": "http://icons.iconarchive.com/icons/hopstarter/malware/256/Notification-icon.png",
         "onUninstalled": () => { },
         "virusAction": () => { }
+    },
+    "virus2": {
+        "friendlyName": "Notivirus",
+        "size": 25,
+        "installed": true,
+        "installer": false,
+        "protected": false,
+        "virus": true,
+        "icon": "http://icons.iconarchive.com/icons/gianni-polito/colobrush/128/software-amarok-icon.png",
+        "onUninstalled": () => { },
+        "virusAction": () => { 
+            setTimeout(NotificationShow, getRandomInt(0, 10000), "YEEEET!", "", "http://icons.iconarchive.com/icons/gianni-polito/colobrush/128/software-firefox-icon.png");
+            setTimeout(NotificationShow, getRandomInt(0, 10000), "YEEEET!", "", "http://icons.iconarchive.com/icons/gianni-polito/colobrush/128/software-firefox-icon.png");
+            setTimeout(NotificationShow, getRandomInt(0, 10000), "YEEEET!", "", "http://icons.iconarchive.com/icons/gianni-polito/colobrush/128/software-firefox-icon.png");
+            setTimeout(NotificationShow, getRandomInt(0, 10000), "YEEEET!", "", "http://icons.iconarchive.com/icons/gianni-polito/colobrush/128/software-firefox-icon.png");
+        }
     }
 }

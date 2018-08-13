@@ -20,6 +20,8 @@ function _GameOver()
     $("#endScreen").css("display", "block");
     $("#timePlayed").text(secondsElapsed);
     $("#spaceFreed").text(SpaceStringify(Space.saved));
+    $('#achievementsCompleted').text(AchievementsGetCompleted().length);
+    $('#totalAchievements').text(AchievementsGetAllPossible().length)
     clearInterval(updateLoop);
     CreateSound(new SoundObject("bluescreen.wav", 0.1, false));
 }

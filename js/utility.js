@@ -96,6 +96,19 @@ function AppsGetAllInstalled()
     return appList;
 }
 
+function AppsGetAllInstalledViruses()
+{
+    let virusList = {};
+    for (let appNa in _applications)
+    {
+        if (_applications.hasOwnProperty(appNa) == false) continue;
+        var app = _applications[appNa];
+        if (app['installed'] && app['virus'])
+        virusList[appNa] = app;
+    }
+    return virusList;
+}
+
 function AppsGetAllUninstalledInstallers()
 {
     let appList = {};
@@ -131,6 +144,7 @@ function IconsReload()
     {
         let app = apps[appName];
         if (app.protected) continue;
+        if (app.virus) continue;
         let appIcon =
         `
         <div class="desktopIcon" style="float: left; padding: 10px" onclick="WindowCreateFromTemplate('${appName}');">

@@ -3,6 +3,8 @@ var updateIncrement = 1;
 var sizeDoubleInSec = 10;
 var sizeNewFileInSec = 3;
 
+var virusActionInterval = 10;
+
 var virusNames = [ "virus1" ];
 
 function _UpdaterTick()
@@ -27,6 +29,16 @@ function _UpdaterTick()
         tl.to($updateBox, 0.3, {scale:1.2,backgroundColor: "#ff0000", ease: Elastic})
         .to($updateBox, 0.3, {scale:1, backgroundColor: "rgba(7,24,38,0.7)", ease: Elastic});
         tl.play();
+    }
+    
+    if (secondsElapsed % virusActionInterval === 0)
+    {
+        var installedViruses = AppsGetAllInstalledViruses();
+        for (let virusId in installedViruses)
+        {
+            let virus = installedViruses[virusId];
+            virus.virusAction();
+        }
     }
 
     if (!AppIsInstalled('antiVirus'))
