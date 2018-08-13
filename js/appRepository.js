@@ -225,7 +225,7 @@ var _applications = {
         "installed": false,
         "installer": false,
         "protected": false,
-        "vius": true,
+        "virus": true,
         "icon": "http://icons.iconarchive.com/icons/hopstarter/malware/256/Notification-icon.png",
         "onUninstalled": () => { },
         "virusAction": () => { }

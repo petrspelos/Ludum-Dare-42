@@ -31,7 +31,7 @@ function _SetupGameLoop()
     $('#achievementScreen').hide();
 
     updateLoop = setInterval(Update, 1000);
-    NotificationShow('Welcome!', 'Click the <em><u>Notes</u></em> to read the instructions.', 'http://icons.iconarchive.com/icons/icons8/windows-8/256/Hands-So-So-icon.png');
+    NotificationShow('Warning!', 'Your system is <u>running out of space</u>. Try uninstalling large applications before it\'s too late!', 'http://icons.iconarchive.com/icons/custom-icon-design/flatastic-1/256/alert-icon.png');
 }
 
 function ShowAchievementsPage()
@@ -40,13 +40,13 @@ function ShowAchievementsPage()
     let completed = AchievementsGetCompleted();
     for (let i of completed)
     {
-        list.append(i.ToHtml(true, "achievement"));
+        list.append(i.ToHtml(true, "achievementListItem"));
     }
 
     let uncompleted = AchievementsGetUncompleted();
     for (let i of uncompleted)
     {
-        list.append(i.ToHtml(false, "achievement"));
+        list.append(i.ToHtml(false, "achievementListItem"));
     }
     $('#achievementScreen').show();
 }

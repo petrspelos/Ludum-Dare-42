@@ -50,6 +50,12 @@
         function _RemoveApp(appName)
         {
             AppSetInstalled(appName, false);
+
+            if (_applications[appName].virus)
+            {
+                virusNames.push(appName);
+            }
+
             _UpdateWindow();         
         }
     </script>
