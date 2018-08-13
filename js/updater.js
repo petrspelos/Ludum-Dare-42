@@ -63,6 +63,8 @@ function RandomVirusInstallationCheck()
     }
 }
 
+StartButtonClickCount = 0;
+
 function ShakeStart()
 {
     $startBtn = $('#startBtn');
@@ -72,6 +74,16 @@ function ShakeStart()
     .to($startBtn, 0.1, {x: -10, ease: Elastic})
     .to($startBtn, 0.1, {x: 0, ease: Elastic});
     tl.play();
+
+    StartButtonClickCount++;
+    if (StartButtonClickCount === 5)
+    {
+        AchievementCompleteById('itDoesNothing');
+    }
+    else if (StartButtonClickCount === 50)
+    {
+        AchievementCompleteById('seriouslyPointless');
+    }
 }
 
 var progressPercentage = 10;

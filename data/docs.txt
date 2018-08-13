@@ -14,9 +14,11 @@ Try to survive as long as possible, and most importantly, have fun!
 
 • Remove files from the thrash bin to clear up some space.
 
-• Uninstall big applications by clicking System Settings > Uninstall Applications. Uninstall apps by going into the System settings and clicking Uninstall Applications. Choose which apps to uninstall wisely, as you may need them in the future, and re-installing can take a lot of time.
+• Uninstall big applications by clicking System Settings > Uninstall Applications. Choose which apps to uninstall wisely, as you may need them in the future, and re-installing can take a lot of time.
 
 • Install new applications from the App Store to assist you in clearing disk space.
+
+• Remove viruses by scanning with the VirusButcher.
 
 • Hunt for achievements
 

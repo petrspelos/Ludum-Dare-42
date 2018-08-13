@@ -18,5 +18,30 @@ var _achievementRepo = {
         "title": "Indecisive",
         "description": "Change your wallpaper 10 times.",
         "iconUrl": "http://icons.iconarchive.com/icons/dakirby309/simply-styled/128/Picture-Viewer-icon.png"
+    },
+    "whoops": {
+        "title": "Whoops...",
+        "description": "Uninstall System Settings",
+        "iconUrl": "http://icons.iconarchive.com/icons/everaldo/crystal-clear/128/Filesystem-file-broken-icon.png"
+    },
+    "notes": {
+        "title": "All alone",
+        "description": "Uninstall Notes",
+        "iconUrl": "http://icons.iconarchive.com/icons/everaldo/crystal-clear/128/Filesystem-file-broken-icon.png"
+    },
+    "itDoesNothing": {
+        "title": "It does nothing",
+        "description": "Click the start button 5 times",
+        "iconUrl": "http://icons.iconarchive.com/icons/everaldo/crystal-clear/128/Filesystem-file-broken-icon.png"
+    },
+    "seriouslyPointless": {
+        "title": "Seriously, it's pointless.",
+        "description": "Click the start button 50 times",
+        "iconUrl": "http://icons.iconarchive.com/icons/everaldo/crystal-clear/128/Filesystem-file-broken-icon.png"
+    },
+    "novelist": {
+        "title": "Novelist",
+        "description": "Write 5000 characters in Notes",
+        "iconUrl": "http://icons.iconarchive.com/icons/everaldo/crystal-clear/128/Filesystem-file-broken-icon.png"
     }
 }
