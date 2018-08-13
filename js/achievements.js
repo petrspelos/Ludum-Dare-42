@@ -9,10 +9,10 @@ class Achievement
         this.iconUrl = iconUrl;
     }
 
-    ToHtml(completed)
+    ToHtml(completed, classes)
     {
         return `
-        <div id="ach" class="achievement ${completed ? 'achievement-completed' : ''} uiTransparent">
+        <div id="ach" class="achievement ${completed ? 'achievement-completed' : ''} uiTransparent ${classes}">
             <div class="container">
                 <div class="row">
                     <div class="col-3">
