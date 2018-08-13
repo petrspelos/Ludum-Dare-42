@@ -32,21 +32,21 @@ var _achievementRepo = {
     "notes": {
         "title": "All alone",
         "description": "Uninstall Notes",
-        "iconUrl": "http://icons.iconarchive.com/icons/everaldo/crystal-clear/128/Filesystem-file-broken-icon.png"
+        "iconUrl": "http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Actions-draw-eraser-icon.png"
     },
     "itDoesNothing": {
         "title": "It does nothing",
         "description": "Click the start button 5 times",
-        "iconUrl": "http://icons.iconarchive.com/icons/everaldo/crystal-clear/128/Filesystem-file-broken-icon.png"
+        "iconUrl": "http://icons.iconarchive.com/icons/iconsmind/outline/256/Cursor-Click-icon.png"
     },
     "seriouslyPointless": {
         "title": "Seriously, it's pointless.",
         "description": "Click the start button 50 times",
-        "iconUrl": "http://icons.iconarchive.com/icons/emoticonshd.com/emoji/64/Emoticon-Thinking-Confused-Shrug-icon.png"
+        "iconUrl": "http://icons.iconarchive.com/icons/iconsmind/outline/256/Cursor-Click-2-icon.png"
     },
     "novelist": {
         "title": "Novelist",
         "description": "Write 5000 characters in Notes",
-        "iconUrl": "http://icons.iconarchive.com/icons/everaldo/crystal-clear/128/Filesystem-file-broken-icon.png"
+        "iconUrl": "http://icons.iconarchive.com/icons/wwalczyszyn/iwindows/256/Wordpad-icon.png"
     }
 }
