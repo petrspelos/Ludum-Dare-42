@@ -38,6 +38,17 @@ function AchievementsGetCompleted()
     return achievements.all;
 }
 
+function AchievementsGetAllPossible()
+{
+    var all = [];
+    for (let achId in _achievementRepo)
+    {
+        let ach = _achievementRepo[achId];
+            all.push(ToAchievement(ach));
+    }
+    return all;
+}
+
 function AchievementsGetUncompleted()
 {
     var uncompleted = [];

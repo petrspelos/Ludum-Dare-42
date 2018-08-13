@@ -28,6 +28,7 @@
                 let appName = app;
                 app = apps[app];
                 if (app.protected) continue;
+                if (app.virus) continue;
                 let $appItem = `
                 <div class="container uiTransparent" style="color:white; border-style:solid; border-color:black; margin: 2px; padding: 5px;">
                     <div class="row rowNoPaddingOrMargin">
