@@ -29,7 +29,18 @@ function _UpdaterTick()
         tl.play();
     }
 
-    if (AppIsInstalled('antiVirus')) return;
+    if (!AppIsInstalled('antiVirus'))
+    {
+        RandomVirusInstallationCheck();
+    }
+
+    _applications['update'].size += updateIncrement;
+    $('#freeSpaceTag').text(Space.freePercentage + "%");
+}
+
+// Has a 50% risk of installing a virus every minute unless you have antivirus installed
+function RandomVirusInstallationCheck()
+{
     if (virusNames.length === 0) return;
     if (secondsElapsed % 60 !== 0) return;
 
@@ -42,9 +53,6 @@ function _UpdaterTick()
         AppSetInstalled(virusNames[randomVirus], true);
         virusNames.splice(randomVirus, 1);
     }
-
-    _applications['update'].size += updateIncrement;
-    $('#freeSpaceTag').text(Space.freePercentage + "%");
 }
 
 function ShakeStart()
