@@ -53,7 +53,7 @@ function InitializeAudio()
 
     // Subscribe mouse click to play audio
     $("html").click(() => OnMouseClick());
-    $("html").contextmenu(() => CreateSound(new SoundObject("keypress.wav", 1, true)));
+    $("html").contextmenu(() => CreateSound(new SoundObject("mousepress.wav", 1, true)));
 }
 
 ClickHistory = [];
