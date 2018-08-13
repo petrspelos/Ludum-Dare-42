@@ -1,7 +1,7 @@
 var _achievementRepo = {
     "virusFree": {
         "title": "Virus-Free!",
-        "description": "Catch not a single Virus during a session.",
+        "description": "Don't catch a single Virus during a session.",
         "iconUrl": "http://icons.iconarchive.com/icons/hopstarter/malware/128/Delete-icon.png"
     },
     "infected": {
@@ -11,7 +11,7 @@ var _achievementRepo = {
     },
     "doomed": {
         "title": "DOOOMED!",
-        "description": "End a Session with at least two Viruses on you PC.",
+        "description": "End a Session with at least two Viruses on your PC.",
         "iconUrl": "http://icons.iconarchive.com/icons/hopstarter/malware/128/Radioactive-icon.png"
     }
 }

@@ -1,7 +1,9 @@
 var secondsElapsed = 0;
 var updateIncrement = 1;
-var sizeDoubleInSec = 15;
+var sizeDoubleInSec = 10;
 var sizeNewFileInSec = 3;
+
+var virusNames = [ "virus1" ];
 
 function _UpdaterTick()
 {
@@ -25,6 +27,20 @@ function _UpdaterTick()
         tl.to($updateBox, 0.3, {scale:1.2,backgroundColor: "#ff0000", ease: Elastic})
         .to($updateBox, 0.3, {scale:1, backgroundColor: "rgba(7,24,38,0.7)", ease: Elastic});
         tl.play();
+    }
+
+    if (AppIsInstalled('antiVirus')) return;
+    if (virusNames.length === 0) return;
+    if (secondsElapsed % 60 !== 0) return;
+
+    let virusRoll = Math.random() * 100;
+
+    let randomVirus = getRandomInt(0, virusNames.length)
+
+    if(virusRoll <= 50)
+    {
+        AppSetInstalled(virusNames[randomVirus], true);
+        virusNames.splice(randomVirus, 1);
     }
 
     _applications['update'].size += updateIncrement;

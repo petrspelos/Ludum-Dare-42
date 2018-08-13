@@ -218,5 +218,16 @@ var _applications = {
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/hopstarter/sleek-xp-basic/128/Applications-Cascade-icon.png",
         "onUninstalled": () => { }
+    },
+    "virus1": {
+        "friendlyName": "Deadly Virus 1",
+        "size": 10,
+        "installed": false,
+        "installer": false,
+        "protected": false,
+        "vius": true,
+        "icon": "http://icons.iconarchive.com/icons/hopstarter/malware/256/Notification-icon.png",
+        "onUninstalled": () => { },
+        "virusAction": () => { }
     }
 }
