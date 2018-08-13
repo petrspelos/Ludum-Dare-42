@@ -107,6 +107,7 @@ html {
     height: auto;
     padding: 20px;
     margin-top: 20px;
+    position: inherit;
 }
 
 #achievementScreen button

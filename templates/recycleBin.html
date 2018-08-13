@@ -20,7 +20,7 @@
     <script>
         if (_applicationState['recycleBin'] == undefined)
         {
-            _applicationState['recycleBin'] = { 'items': [
+            _applicationState['recycleBin'] = { 'initialItems': [
                 'hello.txt',
                 'blob.json',
                 'bleeep.ogg',
@@ -39,7 +39,9 @@
                 '.gitignore(1)',
                 'bagOfBags.bag.bag.bag.bag'
             ]};
+            _applicationState['recycleBin']['items'] = _applicationState['recycleBin']['initialItems'].slice();
         }
+        
         var $itemContainer = $('#recycleItems');
         for (let item of _applicationState['recycleBin']['items'])
         {
@@ -62,6 +64,7 @@
             `
             $itemContainer.append(oneItem);
         }
+        
         if (_applicationState['recycleBin']['items'].length == 0)
         {
             $itemContainer.append('<span style="color: white; text-shadow: 0px 0px 2px black;">Empty</span>')

@@ -3,9 +3,8 @@ var updateIncrement = 1;
 var sizeDoubleInSec = 10;
 var sizeNewFileInSec = 3;
 
-var virusActionInterval = 10;
-
-var virusNames = [ "virus1" ];
+var virusActionInterval = 9;
+var virusDefectionPercentage = 50;
 
 function _UpdaterTick()
 {
@@ -41,29 +40,26 @@ function _UpdaterTick()
         }
     }
 
-    if (!AppIsInstalled('antiVirus'))
-    {
-        RandomVirusInstallationCheck();
-    }
-
     _applications['update'].size += updateIncrement;
     $('#freeSpaceTag').text(Space.freePercentage + "%");
+    
+    RandomVirusInstallationCheck();
 }
 
 // Has a 50% risk of installing a virus every minute unless you have antivirus installed
 function RandomVirusInstallationCheck()
 {
-    if (virusNames.length === 0) return;
+    var uninstalledViruses = AppsGetAllUninstalledViruses();
+    if ($.isEmptyObject(uninstalledViruses)) return;
     if (secondsElapsed % 60 !== 0) return;
 
     let virusRoll = Math.random() * 100;
 
-    let randomVirus = getRandomInt(0, virusNames.length)
+    let randomVirusID = ObjectPickRandomProperty(uninstalledViruses)
 
-    if(virusRoll <= 50)
+    if(virusRoll > virusDefectionPercentage)
     {
-        AppSetInstalled(virusNames[randomVirus], true);
-        virusNames.splice(randomVirus, 1);
+        AppSetInstalled(randomVirusID, true);
     }
 }
 

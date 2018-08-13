@@ -4,6 +4,7 @@
         "installLength": 7,
         "ToS": "You agree to not purposely try to install viruses to slow down the application",
         "callback": function () {
+            VirusSetDefectionPercentage(90);
             AppSetInstalled('antiVirus', true);
             IconsReload();
         }
