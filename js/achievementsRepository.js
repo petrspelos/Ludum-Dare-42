@@ -27,12 +27,12 @@ var _achievementRepo = {
     "whoops": {
         "title": "Whoops...",
         "description": "Uninstall System Settings",
-        "iconUrl": "http://icons.iconarchive.com/icons/everaldo/crystal-clear/128/Filesystem-file-broken-icon.png"
+        "iconUrl": "http://icons.iconarchive.com/icons/musett/lcd-boxes/128/Broken-Clean-icon.png"
     },
     "notes": {
         "title": "All alone",
         "description": "Uninstall Notes",
-        "iconUrl": "http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Actions-draw-eraser-icon.png"
+        "iconUrl": "http://icons.iconarchive.com/icons/artdesigner/emoticons/128/scared-icon.png"
     },
     "itDoesNothing": {
         "title": "It does nothing",
@@ -47,6 +47,6 @@ var _achievementRepo = {
     "novelist": {
         "title": "Novelist",
         "description": "Write 5000 characters in Notes",
-        "iconUrl": "http://icons.iconarchive.com/icons/wwalczyszyn/iwindows/256/Wordpad-icon.png"
+        "iconUrl": "http://icons.iconarchive.com/icons/wwalczyszyn/iwindows/128/Wordpad-icon.png"
     }
 }

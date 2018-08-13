@@ -17,22 +17,22 @@ var _applications = {
         "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/book-bookmark-icon.png",
         "onUninstalled": () => { }
     },
+    "notesInstaller": {
+        "friendlyName": "Install Notes",
+        "size": 15,
+        "installed": false,
+        "installer": true,
+        "protected": false,
+        "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/book-bookmark-icon.png",
+        "onUninstalled": () => { }
+    },
     "settings-start": {
         "friendlyName": "System Settings",
-        "size": 15,
+        "size": 20,
         "installed": true,
         "installer": false,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/wrench-screwdriver-icon.png",
-        "onUninstalled": () => { }
-    },
-    "consoleInstaller": {
-        "friendlyName": "Console Installer",
-        "size": 5,
-        "installed": false,
-        "installer": true,
-        "protected": false,
-        "icon": "http://icons.iconarchive.com/icons/dakirby309/simply-styled/128/Default-Programs-icon.png",
         "onUninstalled": () => { }
     },
     "console": {
@@ -44,18 +44,18 @@ var _applications = {
         "icon": "http://icons.iconarchive.com/icons/dakirby309/simply-styled/128/Default-Programs-icon.png",
         "onUninstalled": () => { }
     },
-    "notesInstaller": {
-        "friendlyName": "Install Notes",
-        "size": 5,
+    "consoleInstaller": {
+        "friendlyName": "Console Installer",
+        "size": 15,
         "installed": false,
         "installer": true,
         "protected": false,
-        "icon": "http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/book-bookmark-icon.png",
+        "icon": "http://icons.iconarchive.com/icons/dakirby309/simply-styled/128/Default-Programs-icon.png",
         "onUninstalled": () => { }
     },
     "eatThePlantInstaller": {
         "friendlyName": "ETP Installer",
-        "size": 10,
+        "size": 150,
         "installed": false,
         "installer": true,
         "protected": false,
@@ -64,7 +64,7 @@ var _applications = {
     },
     "eatThePlant": {
         "friendlyName": "EAT THE PLANT! =)",
-        "size": 250,
+        "size": 150,
         "installed": false,
         "installer": false,
         "protected": false,
@@ -73,7 +73,7 @@ var _applications = {
     },
     "virusButcherInstaller": {
         "friendlyName": "VirusButcher Installer",
-        "size": 15,
+        "size": 50,
         "installed": false,
         "installer": true,
         "protected": false,
@@ -91,7 +91,7 @@ var _applications = {
     },
     "educationInstaller": {
         "friendlyName": "Education Installer",
-        "size": 10,
+        "size": 30,
         "installed": false,
         "installer": true,
         "protected": false,
@@ -109,7 +109,7 @@ var _applications = {
     },
     "antiVirusInstaller": {
         "friendlyName": "WinDOORS AntiVirus Installer",
-        "size": 5,
+        "size": 300,
         "installed": false,
         "installer": true,
         "protected": false,
@@ -119,7 +119,7 @@ var _applications = {
     "antiVirus":
     {
         "friendlyName": "WinDOORS AntiVirus",
-        "size": 30,
+        "size": 300,
         "installed": false,
         "installer": false,
         "protected": false,
@@ -129,7 +129,7 @@ var _applications = {
     "stuffBag":
     {
         "friendlyName": "Stuff.bag",
-        "size": 500,
+        "size": 400,
         "installed": true,
         "installer": false,
         "protected": false,
@@ -139,7 +139,7 @@ var _applications = {
     "bagKiller":
     {
         "friendlyName": ".BAG Remover",
-        "size": 5,
+        "size": 25,
         "installed": false,
         "installer": false,
         "protected": false,
@@ -158,7 +158,7 @@ var _applications = {
     },
     "other": {
         "friendlyName": "other sources of space usage / space unusage",
-        "size": -0,
+        "size": 700,
         "installed": true,
         "installer": false,
         "protected": true,
@@ -176,7 +176,7 @@ var _applications = {
     },
     "eyesInstaller": {
         "friendlyName": "Eyes Installer",
-        "size": 25,
+        "size": 100,
         "installed": false,
         "installer": true,
         "protected": false,
@@ -185,7 +185,7 @@ var _applications = {
     },
     "eyes": {
         "friendlyName": "Eyes",
-        "size": 150,
+        "size": 100,
         "installed": false,
         "installer": false,
         "protected": false,
@@ -203,7 +203,7 @@ var _applications = {
     },
     "settings-appOverviewInstaller": {
         "friendlyName": "Application Overview Installer",
-        "size": 1,
+        "size": 15,
         "installed": false,
         "installer": true,
         "protected": false,
@@ -212,7 +212,7 @@ var _applications = {
     },
     "settings-appOverview": {
         "friendlyName": "Application Overview",
-        "size": 1,
+        "size": 15,
         "installed": false,
         "installer": false,
         "protected": false,
