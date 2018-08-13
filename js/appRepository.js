@@ -38,7 +38,7 @@ var _applications = {
     "console": {
         "friendlyName": "Console",
         "size": 15,
-        "installed": true,
+        "installed": false,
         "installer": false,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/dakirby309/simply-styled/128/Default-Programs-icon.png",
