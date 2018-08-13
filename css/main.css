@@ -99,9 +99,10 @@ html {
     overflow-y: scroll;
 }
 
-#achievementScreen #sampleAchievement
+#achievementScreen #achievement
 {
-    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.4);
+    width: auto;
+    height: auto;
     padding: 20px;
     background-color: lightgray;
     margin-top: 20px;

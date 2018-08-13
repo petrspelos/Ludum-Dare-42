@@ -36,5 +36,11 @@ function _SetupGameLoop()
 
 function ShowAchievementsPage()
 {
+    let list = $('#achievementList');
+    let completed = AchievementsGetCompleted();
+    for (let i of completed)
+    {
+        list.append(i.ToHtml(true));
+    }
     $('#achievementScreen').show();
 }
