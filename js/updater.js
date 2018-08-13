@@ -3,7 +3,8 @@ var updateIncrement = 1;
 var sizeDoubleInSec = 10;
 var sizeNewFileInSec = 3;
 
-var virusActionInterval = 10;
+var virusActionInterval = 9;
+var virusInfectionPercentage = 50;
 
 var virusNames = [ "virus1" ];
 
@@ -41,11 +42,6 @@ function _UpdaterTick()
         }
     }
 
-    if (!AppIsInstalled('antiVirus'))
-    {
-        RandomVirusInstallationCheck();
-    }
-
     _applications['update'].size += updateIncrement;
     $('#freeSpaceTag').text(Space.freePercentage + "%");
 }
@@ -60,7 +56,7 @@ function RandomVirusInstallationCheck()
 
     let randomVirus = getRandomInt(0, virusNames.length)
 
-    if(virusRoll <= 50)
+    if(virusRoll <= virusInfectionPercentage)
     {
         AppSetInstalled(virusNames[randomVirus], true);
         virusNames.splice(randomVirus, 1);

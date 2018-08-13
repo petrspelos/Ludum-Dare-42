@@ -83,7 +83,7 @@ function AppSetInstalled(appName, installed)
 
 var InstallerTimeout; // Important for multiple installations.
 
-function AppsGetAllInstalled()
+function AppsGetAllInstalled(noProtectedOrViruses=false)
 {
     let appList = {};
     for (let appNa in _applications)
@@ -91,9 +91,18 @@ function AppsGetAllInstalled()
         if (_applications.hasOwnProperty(appNa) == false) continue;
         var app = _applications[appNa];
         if (app['installed'])
+        {
+            if (noProtectedOrViruses && (app['protected'] || app['virus']))
+                continue;
             appList[appNa] = app;
+        }
     }
     return appList;
+}
+
+function AppsShuffleOrder()
+{
+    _applications = ArrayShuffle(_applications);
 }
 
 function AppsGetAllInstalledViruses()
@@ -104,7 +113,7 @@ function AppsGetAllInstalledViruses()
         if (_applications.hasOwnProperty(appNa) == false) continue;
         var app = _applications[appNa];
         if (app['installed'] && app['virus'])
-        virusList[appNa] = app;
+            virusList[appNa] = app;
     }
     return virusList;
 }
@@ -135,11 +144,12 @@ function SpaceAdd(amount, countForScore=false)
     _applications['other'].size -= amount;
 }
 
-function IconsReload()
+function IconsReload(shuffle=false)
 {
     let apps = AppsGetAllInstalled();
     let $iconTray = $('#iconTray');
     $iconTray.empty();
+    let icons = [];
     for (let appName in apps)
     {
         let app = apps[appName];
@@ -163,7 +173,38 @@ function IconsReload()
             </div>
         </div>
         `;
-        $iconTray.append(appIcon);
+        icons.push(appIcon);
+    }
+    for (let appIndex in _fakeApps)
+    {
+        let app = _fakeApps[appIndex];
+        if (app.protected) continue;
+        if (app.virus) continue;
+        let appIcon =
+        `
+        <div class="desktopIcon" style="float: left; padding: 10px" onclick="WindowCreateFromTemplate('fakeApp');">
+            <div class="container">
+                <div class="row" style="margin-bottom: 10px;">
+                    <div class="col-12 rowNoPaddingOrMargin verticalAlign">
+                        <img src="${app.icon}" width="60" height="60" style="margin: auto"/>
+                        ${app.installer ? '<img src="http://icons.iconarchive.com/icons/paomedia/small-n-flat/128/wrench-screwdriver-icon.png" class="iconBadge">' : ''}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 verticalAlign rowNoPaddingOrMargin">
+                        <span style="color: white; text-shadow: 0px 0px 2px black; width: 100%;">${app.friendlyName}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        `;
+        icons.push(appIcon);
+    }
+    if (shuffle)
+        icons = ArrayShuffle(icons);
+    for (let icon of icons)
+    {
+        $iconTray.append(icon);
     }
 }
 
@@ -201,4 +242,30 @@ function SpaceStringify(input)
 function SpaceToPercentageOfTotalStorage(amount)
 {
     return Math.round((10000*amount)/Space.max)/100;
+}
+
+function VirusSetInfectionPercentage(percentage)
+{
+    virusInfectionPercentage = percentage;
+}
+
+function ArrayShuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+    while (0 !== currentIndex) {  
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;  
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }  
+    return array;
+}
+
+function ObjectPickRandomProperty(obj) {
+    var result;
+    var count = 0;
+    for (var prop in obj)
+        if (Math.random() < 1/++count)
+           result = prop;
+    return result;
 }

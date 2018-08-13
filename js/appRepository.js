@@ -124,7 +124,7 @@ var _applications = {
         "installer": false,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/hopstarter/malware/256/Patched-icon.png",
-        "onUninstalled": () => { }
+        "onUninstalled": () => { VirusSetInfectionPercentage(50); }
     },
     "stuffBag":
     {
@@ -233,7 +233,7 @@ var _applications = {
     "virus2": {
         "friendlyName": "Notivirus",
         "size": 25,
-        "installed": true,
+        "installed": false,
         "installer": false,
         "protected": false,
         "virus": true,
@@ -245,5 +245,28 @@ var _applications = {
             setTimeout(NotificationShow, getRandomInt(0, 10000), "YEEEET!", "", "http://icons.iconarchive.com/icons/gianni-polito/colobrush/128/software-firefox-icon.png");
             setTimeout(NotificationShow, getRandomInt(0, 10000), "YEEEET!", "", "http://icons.iconarchive.com/icons/gianni-polito/colobrush/128/software-firefox-icon.png");
         }
+    },
+    "virus3": {
+        "friendlyName": "Switcheroo",
+        "size": 10,
+        "installed": true,
+        "installer": false,
+        "protected": false,
+        "virus": true,
+        "icon": "http://icons.iconarchive.com/icons/gianni-polito/colobrush/128/software-amarok-icon.png",
+        "onUninstalled": () => {
+            _fakeApps = [];
+         },
+        "virusAction": () => {
+            var installedApps = AppsGetAllInstalled(true);
+            var randAppId = ObjectPickRandomProperty(installedApps);
+            var randApp = installedApps[randAppId];
+            var fakeApp = Object.assign({}, randApp);
+            fakeApp.fake = true;
+            _fakeApps[randAppId] = fakeApp;
+            IconsReload(true);
+        }
     }
-}
+};
+
+var _fakeApps = [];
