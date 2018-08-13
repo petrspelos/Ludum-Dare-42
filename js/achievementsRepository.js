@@ -19,6 +19,11 @@ var _achievementRepo = {
         "description": "Change your wallpaper 10 times.",
         "iconUrl": "http://icons.iconarchive.com/icons/dakirby309/simply-styled/128/Picture-Viewer-icon.png"
     },
+    "thesound": {
+        "title": "THE SOUNDS!",
+        "description": "Click fast to properly enjoy the sounds.",
+        "iconUrl": "img/ach-face-icon.png"
+    },
     "whoops": {
         "title": "Whoops...",
         "description": "Uninstall System Settings",

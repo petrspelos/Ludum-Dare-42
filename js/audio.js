@@ -52,8 +52,30 @@ function InitializeAudio()
     $("html").keydown(() => CreateSound(new SoundObject("keypress.wav", 1, true)));
 
     // Subscribe mouse click to play audio
-    $("html").click(() => CreateSound(new SoundObject("mousepress.wav", 1, true)));
+    $("html").click(() => OnMouseClick());
     $("html").contextmenu(() => CreateSound(new SoundObject("keypress.wav", 1, true)));
+}
+
+ClickHistory = [];
+
+function OnMouseClick()
+{
+    CreateSound(new SoundObject("mousepress.wav", 1, true));
+    
+    if(AchievementIsCompletedById("thesound")) return;
+
+    if(ClickHistory.length > 5)
+    {
+        var lastClickDiff = ClickHistory[ClickHistory.length - 2] - ClickHistory[ClickHistory.length - 1];
+        if(lastClickDiff <= 250)
+        {
+            AchievementCompleteById("thesound");
+            ClickHistory = [];
+            return;
+        }
+    }
+
+    ClickHistory.push(new Date().getTime());
 }
 
 function CreateSound(sound)
