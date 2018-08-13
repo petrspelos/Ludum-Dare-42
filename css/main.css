@@ -76,6 +76,7 @@ html {
     background-image: url('../img/Blue.jpg');
     widows: 100%;
     z-index: 9999999;
+    display: none;
 }
 
 #achievementScreen #container {
@@ -99,12 +100,12 @@ html {
     overflow-y: scroll;
 }
 
-#achievementScreen #achievement
+#achievementScreen .achievement
 {
-    width: auto;
+    margin: auto;
+    width: 90%;
     height: auto;
     padding: 20px;
-    background-color: lightgray;
     margin-top: 20px;
 }
 

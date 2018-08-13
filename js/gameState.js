@@ -40,7 +40,13 @@ function ShowAchievementsPage()
     let completed = AchievementsGetCompleted();
     for (let i of completed)
     {
-        list.append(i.ToHtml(true));
+        list.append(i.ToHtml(true, "achievement"));
+    }
+
+    let uncompleted = AchievementsGetUncompleted();
+    for (let i of uncompleted)
+    {
+        list.append(i.ToHtml(false, "achievement"));
     }
     $('#achievementScreen').show();
 }
