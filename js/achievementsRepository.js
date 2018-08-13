@@ -37,12 +37,12 @@ var _achievementRepo = {
     "itDoesNothing": {
         "title": "It does nothing",
         "description": "Click the start button 5 times",
-        "iconUrl": "http://icons.iconarchive.com/icons/emoticonshd.com/emoji/64/Emoticon-Shrug-Shrugging-icon.png"
+        "iconUrl": "http://icons.iconarchive.com/icons/iconsmind/outline/256/Cursor-Click-icon.png"
     },
     "seriouslyPointless": {
         "title": "Seriously, it's pointless.",
         "description": "Click the start button 50 times",
-        "iconUrl": "http://icons.iconarchive.com/icons/emoticonshd.com/emoji/64/Emoticon-Thinking-Confused-Shrug-icon.png"
+        "iconUrl": "http://icons.iconarchive.com/icons/iconsmind/outline/256/Cursor-Click-2-icon.png"
     },
     "novelist": {
         "title": "Novelist",
