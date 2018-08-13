@@ -124,7 +124,7 @@ var _applications = {
         "installer": false,
         "protected": false,
         "icon": "http://icons.iconarchive.com/icons/hopstarter/malware/256/Patched-icon.png",
-        "onUninstalled": () => { VirusSetInfectionPercentage(50); }
+        "onUninstalled": () => { VirusSetDefectionPercentage(50); }
     },
     "stuffBag":
     {
@@ -270,7 +270,7 @@ var _applications = {
     "virus4": {
         "friendlyName": "Garbage-Uncollector",
         "size": 10,
-        "installed": true,
+        "installed": false,
         "installer": false,
         "protected": false,
         "virus": true,

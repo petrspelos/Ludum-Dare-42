@@ -118,6 +118,19 @@ function AppsGetAllInstalledViruses()
     return virusList;
 }
 
+function AppsGetAllUninstalledViruses()
+{
+    let virusList = {};
+    for (let appNa in _applications)
+    {
+        if (_applications.hasOwnProperty(appNa) == false) continue;
+        var app = _applications[appNa];
+        if (app['installed'] == false && app['virus'])
+            virusList[appNa] = app;
+    }
+    return virusList;
+}
+
 function AppsGetAllUninstalledInstallers()
 {
     let appList = {};
@@ -246,7 +259,7 @@ function SpaceToPercentageOfTotalStorage(amount)
 
 function VirusSetInfectionPercentage(percentage)
 {
-    virusInfectionPercentage = percentage;
+    virusDefectionPercentage = percentage;
 }
 
 function ArrayShuffle(array) {
