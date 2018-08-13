@@ -10,6 +10,7 @@ var virusInfectionCounter = 0;
 
 function _UpdaterTick()
 {
+    if (GameOver) return;
     secondsElapsed++;
 
     if(secondsElapsed % sizeDoubleInSec === 0)

@@ -15,6 +15,7 @@ function _StartBootSequence()
     tl.play();
 }
 
+var GameOver = false;
 function _GameOver()
 {
     var viruses = AppsGetAllInstalledViruses();
