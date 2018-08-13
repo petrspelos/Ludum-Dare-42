@@ -11,7 +11,7 @@ var _achievementRepo = {
     },
     "doomed": {
         "title": "DOOOMED!",
-        "description": "End a Session with at least to Viruses on you PC.",
+        "description": "End a Session with at least two Viruses on you PC.",
         "iconUrl": "http://icons.iconarchive.com/icons/hopstarter/malware/128/Radioactive-icon.png"
     }
 }

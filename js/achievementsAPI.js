@@ -7,7 +7,9 @@ function AchievementCompleteById(id)
 {
     if (_achievementRepo[id] == undefined || AchievementIsCompleted(_achievementRepo[id]))
         return;
-    achievements.New(_achievementRepo[id]);
+    let ach = ToAchievement(_achievementRepo[id]);
+    achievements.New(ach);
+    ach.Popup();
 }
 
 function AchievementIsCompleted(achievement)
@@ -17,6 +19,12 @@ function AchievementIsCompleted(achievement)
         ach.description == achievement.description &&
         ach.iconUrl == achievement.iconUrl
     ).length > 0;
+}
+
+function ToAchievement(data)
+{
+    let achObj = new Achievement("", "", "");
+    return Object.assign(achObj, data);
 }
 
 function AchievementIsCompletedById(id)
@@ -36,7 +44,7 @@ function AchievementsGetUncompleted()
     {
         let ach = _achievementRepo[achId];
         if (AchievementIsCompleted(ach) == false)
-            uncompleted.push(ach);
+            uncompleted.push(ToAchievement(ach));
     }
     return uncompleted;
 }
