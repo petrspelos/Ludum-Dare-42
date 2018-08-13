@@ -50,6 +50,15 @@
         function _RemoveApp(appName)
         {
             AppSetInstalled(appName, false);
+            
+            if(appName === 'settings-start')
+            {
+                AchievementCompleteById('whoops');
+            }
+            else if (appName === 'notes')
+            {
+                AchievementCompleteById('notes');
+            }
 
             if (_applications[appName].virus)
             {

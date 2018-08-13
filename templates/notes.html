@@ -4,5 +4,10 @@ var $notesInput = $('#notesInput');
 $notesInput.val(_applicationState['notes']['content']);
 $notesInput.on('input', function() {
     _applicationState['notes']['content'] = $notesInput.val();
+
+    if ($notesInput.val().length > 5000)
+    {
+        AchievementCompleteById('novelist');
+    }
 });
 </script>
