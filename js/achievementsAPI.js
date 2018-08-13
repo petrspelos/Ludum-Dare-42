@@ -8,6 +8,7 @@ function AchievementCompleteById(id)
     if (_achievementRepo[id] == undefined || AchievementIsCompleted(_achievementRepo[id]))
         return;
     let ach = ToAchievement(_achievementRepo[id]);
+    CallAfterSeconds(() => PlaySound("achievement.wav", 0.5), 0.1);
     achievements.New(ach);
     ach.Popup();
 }
