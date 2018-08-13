@@ -70,7 +70,7 @@ function AppSetInstalled(appName, installed)
     {
         if (app.onUninstalled == undefined)
         {
-            NotificationShow("Uninstaller", `Ehhhhm... hmm... seems like I have no powah here... Unable to uninstall ${friendlyName}.`)
+            NotificationShow("Uninstaller", `Ehhhhm... hmm... seems like I have no powah here... Unable to uninstall ${friendlyName}.`, app.icon)
             return;
         }
         app['installed'] = false;
@@ -257,7 +257,7 @@ function SpaceToPercentageOfTotalStorage(amount)
     return Math.round((10000*amount)/Space.max)/100;
 }
 
-function VirusSetInfectionPercentage(percentage)
+function VirusSetDefectionPercentage (percentage)
 {
     virusDefectionPercentage = percentage;
 }

@@ -1,4 +1,4 @@
-# WinDOORS ![WinDOORS logo](#)
+# WinDOORS ![.\img\WinDOORS\ Logo.jpg](#)
 
 ![Banner image](#)
 
@@ -37,4 +37,3 @@ Ludum Dare page: https://ldjam.com/events/ludum-dare/42/$98887
 #### Petr Sedlacek (@Spelos)
 #### SnoopsSySpoonS (@Snoops)
 #### Marcus Otterström (@LeMorrow)
-
