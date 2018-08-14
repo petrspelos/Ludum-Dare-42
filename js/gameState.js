@@ -15,9 +15,10 @@ function _StartBootSequence()
     tl.play();
 }
 
-var GameOver = false;
+var PlayerIsGameOver = false;
 function _GameOver()
 {
+    PlayerIsGameOver = true;
     var viruses = AppsGetAllInstalledViruses();
     if (Object.keys(viruses).length == 0)
         AchievementCompleteById("virusFree");        
